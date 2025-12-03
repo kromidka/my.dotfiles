@@ -1,0 +1,61 @@
+layout {
+	gaps 8
+	
+	//center-focused-column "never"
+	center-focused-column "on-overflow"
+	
+	preset-column-widths {
+		proportion 0.5
+		proportion 0.7
+	}
+//	preset-widows-heights {
+//		proportion 0.5
+//	}
+
+	default-column-width { proportion 0.7; }
+	//default-column-width {}
+
+
+	focus-ring {
+		width 1.5
+		active-color "orange"
+		inactive-color "#505050"
+		//active-gradient from="#505050" to="#808080" angle=45 relative-to="workspace-view"
+	}
+
+	border {
+		off
+		
+		width 2
+		active-color "orange"
+		inactive-color "#505050"
+		
+		urgent-color "#9b0000"
+	}
+}
+
+	prefer-no-csd
+
+window-rule {
+	draw-border-with-background false
+}
+
+window-rule {
+	match app-id=r#"firefox$"# title="^Picture-in-picture$"
+	match app-id=r#"brave$"# title="^Picture-in-picture$"
+	open-floating true
+}
+
+window-rule {
+	geometry-corner-radius 8
+	clip-to-geometry true
+}
+
+layer-rule {
+	match namespace="^noctalia-overview*"
+	place-within-backdrop true
+	}
+window-rule {
+	match app-id="^brave*"
+	default-column-width { proportion 0.9999;}
+}

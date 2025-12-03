@@ -1,0 +1,13 @@
+input {
+	keyboard {
+		repeat-delay 200
+		repeat-rate 35
+		numlock
+	}
+
+	mouse {
+		accel-profile "flat"
+	}
+
+	focus-follows-mouse max-scroll-amount="30%"
+}

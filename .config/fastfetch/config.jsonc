@@ -6,9 +6,9 @@
     },
     
     "logo": {
-        "type": "builtin",
+        "type": "small",
         "color": {
-            "1": "white",
+            "1": "blink_white",
             "2": "cyan"
         }
     },
@@ -97,6 +97,7 @@
         {
            "type": "media",
            "key": "│ └󰝚",
+           "keyColor": "magenta"
         },
         {
             "type": "custom",

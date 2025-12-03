@@ -1,0 +1,8 @@
+spawn-at-startup "qs" "-c" "noctalia-shell"
+//spawn-at-startup "waybar"
+
+hotkey-overlay { skip-at-startup; }
+
+screenshot-path "~/Pictures/Screenshots/ from %Y-%m-%d $H-$M.png"
+
+
