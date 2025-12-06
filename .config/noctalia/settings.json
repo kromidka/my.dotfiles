@@ -6,11 +6,11 @@
         "enableClipboardHistory": true,
         "pinnedExecs": [
         ],
-        "position": "center",
+        "position": "top_left",
         "sortByMostUsed": true,
         "terminalCommand": "kitty -e",
         "useApp2Unit": false,
-        "viewMode": "list"
+        "viewMode": "grid"
     },
     "audio": {
         "cavaFrameRate": 30,
@@ -61,6 +61,32 @@
             ],
             "left": [
                 {
+                    "icon": "apps",
+                    "id": "CustomButton",
+                    "leftClickExec": "qs -c noctalia-shell ipc call launcher toggle",
+                    "leftClickUpdateText": false,
+                    "maxTextLength": {
+                        "horizontal": 10,
+                        "vertical": 10
+                    },
+                    "middleClickExec": "",
+                    "middleClickUpdateText": false,
+                    "parseJson": false,
+                    "rightClickExec": "qs -c noctalia-shell ipc call wallpaper random",
+                    "rightClickUpdateText": false,
+                    "textCollapse": "",
+                    "textCommand": "",
+                    "textIntervalMs": 3000,
+                    "textStream": false,
+                    "wheelDownExec": "",
+                    "wheelDownUpdateText": false,
+                    "wheelExec": "",
+                    "wheelMode": "unified",
+                    "wheelUpExec": "",
+                    "wheelUpUpdateText": false,
+                    "wheelUpdateText": false
+                },
+                {
                     "customFont": "",
                     "formatHorizontal": "HH:mm ddd, dd.MM",
                     "formatVertical": "HH mm - dd MM",
@@ -90,6 +116,10 @@
                 }
             ],
             "right": [
+                {
+                    "displayMode": "onhover",
+                    "id": "KeyboardLayout"
+                },
                 {
                     "blacklist": [
                     ],
@@ -219,7 +249,7 @@
         "backgroundOpacity": 0.72,
         "colorizeIcons": false,
         "displayMode": "auto_hide",
-        "enabled": true,
+        "enabled": false,
         "floatingRatio": 0.25,
         "monitors": [
         ],

@@ -1,6 +1,6 @@
 {
     "label" : "lock",
-    "action" : "hyperlock",
+    "action" : "qs -c noctalia-shell ipc call lockScreen lock",
     "text" : "Lock",
     "keybind" : "l"
 }

@@ -1,5 +1,7 @@
-spawn-at-startup "qs" "-c" "noctalia-shell"
+spawn-sh-at-startup "qs -c noctalia-shell"
 //spawn-at-startup "waybar"
+spawn-sh-at-startup "wl-paste --type text --watch cliphist store"
+spawn-sh-at-startup "wl-paste --type image --watch cliphist store"
 
 hotkey-overlay { skip-at-startup; }
 
