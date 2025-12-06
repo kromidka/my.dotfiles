@@ -1,0 +1,35 @@
+{
+   "default_locale": "en",
+   "description": "__MSG_extD__",
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAgo0LV2NV0FG7Z2LjLXPIpknOfzQIPpgOiATG8kju5E1faJVKJZcmOkQAOlt2mW6ELQkl3/3+z/rrSxnk4p4FCtZdGNziEgdnl/N50V1qMIyCet3hfNzxOrMaiSEbi3QDtCsdQ6zA/0ZokqEakB01MYgl9XkrsUfGfpdKwv9/Y8QuGKWHFDfZaeVPJa9Rb4vS7aJm/bxUHAyejr0HGwY+PQOTTyXAG29NO1vBUey038b1bhkGUg+00hEl+H10BjWia6x2a4zzSyLefGPo8PKMnYpe/yZm0GV9LD3dwlMJCpbUO1/dXMXnRlNsUjpZh7ERZeRDMByYJBwUjYsp/7ADaQIDAQAB",
+   "manifest_version": 3,
+   "name": "__MSG_extN__",
+   "theme": {
+      "colors": {
+         "bookmark_text": [ 240, 240, 240 ],
+         "button_background": [ 0, 0, 0, 0 ],
+         "frame": [ 4, 5, 6 ],
+         "ntp_background": [ 16, 17, 20 ],
+         "ntp_link": [ 41, 96, 204 ],
+         "ntp_text": [ 255, 255, 255 ],
+         "tab_background_text": [ 160, 160, 160 ],
+         "tab_text": [ 240, 240, 240 ],
+         "toolbar": [ 21, 23, 27 ]
+      },
+      "images": {
+         "theme_frame": "images/theme_frame.png",
+         "theme_ntp_background": "images/theme_ntp_background.png",
+         "theme_tab_background": "images/theme_tab_background.png",
+         "theme_toolbar": "images/theme_toolbar.png"
+      },
+      "properties": {
+         "ntp_background_alignment": "bottom",
+         "ntp_background_repeat": "no-repeat"
+      },
+      "tints": {
+         "buttons": [ 0, 0, 0.69 ]
+      }
+   },
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "1.2"
+}

@@ -41,8 +41,12 @@ window-rule {
 }
 
 window-rule {
+	match title="^Picture in picture$"
+	open-floating true
+}
+
+window-rule {
 	match app-id=r#"firefox$"# title="^Picture-in-picture$"
-	match app-id=r#"brave$"# title="^Picture-in-picture$"
 	open-floating true
 }
 

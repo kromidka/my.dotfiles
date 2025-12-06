@@ -1,0 +1,14 @@
+2025/12/06-19:43:59.257 52534 Creating DB /home/kromid/.config/BraveSoftware/Brave-Browser/Profile 1/Local Extension Settings/dkoaabhijcomjinndlgbmfnmnjnmdeeb since it was missing.
+2025/12/06-19:43:59.265 52534 Reusing MANIFEST /home/kromid/.config/BraveSoftware/Brave-Browser/Profile 1/Local Extension Settings/dkoaabhijcomjinndlgbmfnmnjnmdeeb/MANIFEST-000001
+2025/12/06-19:44:04.504 52534 Level-0 table #5: started
+2025/12/06-19:44:04.523 52534 Level-0 table #5: 4392830 bytes OK
+2025/12/06-19:44:04.526 52534 Delete type=0 #3
+2025/12/06-19:44:10.144 52534 Level-0 table #7: started
+2025/12/06-19:44:10.167 52534 Level-0 table #7: 5709430 bytes OK
+2025/12/06-19:44:10.170 52534 Delete type=0 #4
+2025/12/06-19:45:15.119 52534 Level-0 table #9: started
+2025/12/06-19:45:15.142 52534 Level-0 table #9: 4572383 bytes OK
+2025/12/06-19:45:15.145 52534 Delete type=0 #6
+2025/12/06-19:45:18.777 52536 Level-0 table #11: started
+2025/12/06-19:45:18.819 52536 Level-0 table #11: 5705528 bytes OK
+2025/12/06-19:45:18.822 52536 Delete type=0 #8

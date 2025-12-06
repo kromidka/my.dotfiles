@@ -1,0 +1,32 @@
+{
+   "action": {
+      "default_icon": {
+         "16": "icon-16x16.png",
+         "24": "icon-24x24.png",
+         "32": "icon-32x32.png"
+      },
+      "default_title": "Wikiwand - knowledge, with context"
+   },
+   "background": {
+      "service_worker": "service-worker.js"
+   },
+   "description": "AI-driven wiki aggregator created to enhance user experience on Wikipedia by streamlining knowledge consumption",
+   "externally_connectable": {
+      "matches": [ "*://localhost/*", "https://*.wikiwand.com/*" ]
+   },
+   "icons": {
+      "128": "icon-128x128.png",
+      "16": "icon-16x16.png",
+      "48": "icon-48x48.png"
+   },
+   "key": "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDglPHhZuLFBzscGc6SCbT7/B2lK1/OHVRtEmwqiV7670JIKT2POfvNTgjE7DdY9nd6xYKqj4WiI5YTjJKA8riLkpgH0TNi+Xgt3YmquI7UYZP3d6JqjYOkucXRUR8FGyBowu+pW/TwAM8/oF/kZCsxSEMkrqYKHZufAjkVywrHzQIDAQAB",
+   "manifest_version": 3,
+   "name": "Wikiwand - Elevate Wikipedia with AI",
+   "permissions": [ "webNavigation", "contextMenus" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "10.1.0",
+   "web_accessible_resources": [ {
+      "matches": [ "https://*.wikiwand.com/*" ],
+      "resources": [ "web-accessible-resources/*" ]
+   } ]
+}
