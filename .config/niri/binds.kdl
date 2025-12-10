@@ -51,6 +51,8 @@ binds {
 	Mod+Shift+Page_Up   { move-workspace-up; }
 	Mod+Shift+U         { move-workspace-down; }
 	Mod+Shift+I         { move-workspace-up; }
+	Alt+TAB             { focus-workspace-previous; }
+
 
 	Mod+WheelScrollDown      cooldown-ms=150 { focus-workspace-down; }
 	Mod+WheelScrollUp        cooldown-ms=150 { focus-workspace-up; }

@@ -9,3 +9,9 @@ include "startup.kdl"
 include "binds.kdl"
 
 include "./noctalia.kdl"
+
+include "animation.kdl"
+
+include "display.kdl"
+
+include "misc.kdl"
