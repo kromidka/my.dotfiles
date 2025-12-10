@@ -49,11 +49,11 @@
                     "hideMode": "hidden",
                     "hideWhenIdle": false,
                     "id": "MediaMini",
-                    "maxWidth": 290,
+                    "maxWidth": 300,
                     "scrollingMode": "hover",
                     "showAlbumArt": false,
                     "showArtistFirst": true,
-                    "showProgressRing": true,
+                    "showProgressRing": false,
                     "showVisualizer": true,
                     "useFixedWidth": false,
                     "visualizerType": "wave"
