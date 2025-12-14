@@ -7,6 +7,7 @@
         "pinnedExecs": [
         ],
         "position": "top_left",
+        "showCategories": true,
         "sortByMostUsed": true,
         "terminalCommand": "kitty -e",
         "useApp2Unit": false,
@@ -61,6 +62,7 @@
             ],
             "left": [
                 {
+                    "hideMode": "alwaysExpanded",
                     "icon": "apps",
                     "id": "CustomButton",
                     "leftClickExec": "qs -c noctalia-shell ipc call launcher toggle",
@@ -74,6 +76,7 @@
                     "parseJson": false,
                     "rightClickExec": "qs -c noctalia-shell ipc call wallpaper random",
                     "rightClickUpdateText": false,
+                    "showIcon": true,
                     "textCollapse": "",
                     "textCommand": "",
                     "textIntervalMs": 3000,
@@ -117,7 +120,7 @@
             ],
             "right": [
                 {
-                    "displayMode": "onhover",
+                    "displayMode": "forceOpen",
                     "id": "KeyboardLayout"
                 },
                 {
@@ -183,9 +186,6 @@
             }
         ]
     },
-    "changelog": {
-        "lastSeenVersion": ""
-    },
     "colorSchemes": {
         "darkMode": true,
         "generateTemplatesForPredefined": true,
@@ -248,14 +248,17 @@
     "dock": {
         "backgroundOpacity": 0.72,
         "colorizeIcons": false,
+        "deadOpacity": 0.6,
         "displayMode": "auto_hide",
         "enabled": false,
         "floatingRatio": 0.25,
+        "inactiveIndicators": false,
         "monitors": [
         ],
         "onlySameOutput": true,
         "pinnedApps": [
         ],
+        "pinnedStatic": false,
         "size": 0.7000000000000001
     },
     "general": {
@@ -263,10 +266,12 @@
         "animationDisabled": false,
         "animationSpeed": 1,
         "avatarImage": "/home/kromid/.face",
+        "boxRadiusRatio": 1,
         "compactLockScreen": false,
         "dimmerOpacity": 0.3,
         "enableShadows": true,
         "forceBlackScreenCorners": true,
+        "iRadiusRatio": 1,
         "language": "",
         "lockOnSuspend": true,
         "radiusRatio": 1,
@@ -276,7 +281,8 @@
         "shadowOffsetX": 2,
         "shadowOffsetY": 3,
         "showHibernateOnLockScreen": false,
-        "showScreenCorners": true
+        "showScreenCorners": true,
+        "showSessionButtonsOnLockScreen": true
     },
     "hooks": {
         "darkModeChange": "",
@@ -318,7 +324,16 @@
         ],
         "normalUrgencyDuration": 8,
         "overlayLayer": true,
-        "respectExpireTimeout": false
+        "respectExpireTimeout": false,
+        "sounds": {
+            "criticalSoundFile": "",
+            "enabled": false,
+            "excludedApps": "discord,firefox,chrome,chromium,edge",
+            "lowSoundFile": "",
+            "normalSoundFile": "",
+            "separateSounds": false,
+            "volume": 0.5
+        }
     },
     "osd": {
         "autoHideMs": 2000,

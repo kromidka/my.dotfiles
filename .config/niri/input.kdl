@@ -3,6 +3,11 @@ input {
 		repeat-delay 200
 		repeat-rate 35
 		numlock
+ 	xkb {
+		layout "us, hr, rs"
+		options "grp:alt_shift_toggle"
+        }
+
 	}
 
 	mouse {

@@ -1,0 +1,38 @@
+advcpmv 9.5-1
+binder_linux-dkms 6.16-2
+gobw-bin 1.0-2
+lib32-gtk2 2.24.33-5
+linutil 2025.09.09-1
+logseq-desktop-bin 0.10.15-1
+matugen-git 3.1.0.r1.gcc82736-1
+noctalia 0.4.0-1
+open-tv-bin 1.8.3-1
+python-pywal16 1:3.8.9-3
+rate-mirrors-bin 0.22.0-1
+trash 1.5.2-1
+advcpmv
+binder_linux-dkms
+gobw-bin
+iptvnator-electron-bin
+lib32-gtk2
+linutil
+logseq-desktop-bin
+matugen-git
+noctalia
+open-tv-bin
+python-pywal16
+rate-mirrors-bin
+trash
+advcpmv
+binder_linux-dkms
+gobw-bin
+iptvnator-electron-bin
+lib32-gtk2
+linutil
+logseq-desktop-bin
+matugen-git
+noctalia
+open-tv-bin
+python-pywal16
+rate-mirrors-bin
+trash
