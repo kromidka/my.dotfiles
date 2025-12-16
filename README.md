@@ -43,5 +43,5 @@ if kde instaled before hand just run last command!!!
 this is brave template for clean brave prfile, just the way I like it.
 
 ```sh
-cp -rf "~/git/my.dotfiles/default-Brave-profil/Profile 1/*" ~/.config/BraveSoftware/Brave-Browser/Default/
+cp -rf ~/git/my.dotfiles/default-Brave-profil/'Profile 1'/* ~/.config/BraveSoftware/Brave-Browser/Default/
 ```
