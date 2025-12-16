@@ -26,8 +26,6 @@ noto-fonts
 noto-fonts-cjk
 noto-fonts-emoji
 nsxiv
-paru-bin
-parui-git
 picard
 pv
 ripgrep
