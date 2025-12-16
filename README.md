@@ -27,3 +27,9 @@ dolphin doesn't show open with correctly on niri or wm-s this is the fix:
 `ln -fs /etc/xdg/menus/*applications.menu ~/.config/menus/applications.menu`
 
 if kde instaled before hand just run last command!!!
+
+## Brave profile
+
+this is brave template for clean brave prfile, just the way I like it.
+
+`cp -rf "~/git/my.dotfiles/default-Brave-profil/Profile 1/*" ~/.config/BraveSoftware/Brave-Browser/Default/`
