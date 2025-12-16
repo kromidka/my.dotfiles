@@ -5,16 +5,17 @@ DOTFILES_DIR="$HOME/git/my.dotfiles"
 SOURCE_CONFIG="$DOTFILES_DIR/.config"
 TARGET_CONFIG="$HOME/.config"
 PACMAN_LIST="$DOTFILES_DIR/pacman.txt"
-YAY_LIST="$DOTFILES_DIR/yay-pac.txt"
+LY_CONFIG_DIR="$DOTFILES_DIR/ly"
+LY_TARGET_CONFIG="/etc/ly/config.ini"
 
 # --- 0. System Update ---
 echo "--- Starting System Update ---"
-# -Syu: Sync, Refresh the package list, and Update the system
+# -Syu: Sync, Refresh, Update
 sudo pacman -Syu --noconfirm
 if [ $? -eq 0 ]; then
     echo "[OK] System update complete."
 else
-    echo "[ERROR] System update failed. Check the error above and resolve it before proceeding."
+    echo "[ERROR] System update failed. Please resolve errors before proceeding."
     exit 1
 fi
 echo ""
@@ -25,20 +26,17 @@ echo "--- Checking for Yay ---"
 if ! command -v yay &> /dev/null; then
     echo "[INFO] Yay not found. Installing now..."
     
-    # 1. Install prerequisites (needed for building)
+    # Install prerequisites
     sudo pacman -S --needed --noconfirm base-devel git
     
-    # 2. Clone yay repo to a temporary directory
-    # Note: Using a safe temporary directory in $HOME instead of /opt
+    # Install yay from AUR
     TEMP_DIR="$HOME/yay_temp_install"
     mkdir -p "$TEMP_DIR"
     git clone https://aur.archlinux.org/yay.git "$TEMP_DIR/yay"
     cd "$TEMP_DIR/yay"
-    
-    # 3. Build and install
     makepkg -si --noconfirm
     
-    # 4. Cleanup
+    # Cleanup
     cd "$HOME"
     rm -rf "$TEMP_DIR"
     echo "[OK] Yay installed successfully."
@@ -59,7 +57,6 @@ if [ -d "$SOURCE_CONFIG" ]; then
         target_path="$TARGET_CONFIG/$folder_name"
         backup_path="$TARGET_CONFIG/$folder_name.old"
 
-        # Check if the target exists (and is not already the correct symlink)
         if [ -e "$target_path" ]; then
             current_link=$(readlink "$target_path")
             if [ "$current_link" == "$folder" ]; then
@@ -85,31 +82,61 @@ fi
 
 echo ""
 
-# --- 3. Install Pacman Packages ---
-echo "--- Installing Pacman Packages ---"
+# --- 3. Install Packages ---
+echo "--- Installing Packages ---"
 
 if [ -f "$PACMAN_LIST" ]; then
-    # -S: Sync/Install, --needed: Skip if already installed, -: Read from stdin
-    yay -S --needed - < "$PACMAN_LIST"
+    echo "[INFO] Installing from pacman.txt..."
+    # --noconfirm: automatic yes to all prompts
+    yay -S --needed --noconfirm - < "$PACMAN_LIST"
 else
-    echo "[WARNING] $PACMAN_LIST not found. Skipping pacman installation."
+    echo "[WARNING] $PACMAN_LIST not found."
 fi
 
 echo ""
 
-# --- 4. Install Yay Packages ---
-echo "--- Installing Yay Packages ---"
+# --- 4. Setup Ly Display Manager ---
+echo "--- Setting up Ly Display Manager ---"
 
-# Check if yay is installed before attempting to use it
-if command -v yay &> /dev/null; then
-    if [ -f "$YAY_LIST" ]; then
-        yay -S --needed - < "$YAY_LIST"
-    else
-        echo "[WARNING] $YAY_LIST not found. Skipping yay package installation."
+# 4a. Check if ly is installed
+if ! pacman -Qi ly &> /dev/null; then
+    echo "[INFO] 'ly' package not found. Installing via Yay..."
+    yay -S --needed --noconfirm ly
+fi
+
+# 4b. Disable current DM (Generic check)
+DM_SERVICE_LINK="/etc/systemd/system/display-manager.service"
+if [ -L "$DM_SERVICE_LINK" ]; then
+    CURRENT_DM=$(basename $(readlink "$DM_SERVICE_LINK"))
+    echo "[ACTION] Disabling current active DM: $CURRENT_DM"
+    sudo systemctl disable "$CURRENT_DM"
+fi
+
+# 4c. Configure Services (Disable getty@tty2, Enable ly@tty2)
+echo "[ACTION] Disabling getty@tty2.service..."
+sudo systemctl disable getty@tty2.service
+
+echo "[ACTION] Enabling ly@tty2.service..."
+sudo systemctl enable ly@tty2.service
+
+# 4d. Config File Backup and Copy
+LY_SOURCE_CONFIG="$LY_CONFIG_DIR/config.ini"
+
+if [ -f "$LY_SOURCE_CONFIG" ]; then
+    # Check if target config exists and make backup
+    if [ -f "$LY_TARGET_CONFIG" ]; then
+        echo "[BACKUP] Renaming existing $LY_TARGET_CONFIG to $LY_TARGET_CONFIG.old"
+        sudo mv "$LY_TARGET_CONFIG" "$LY_TARGET_CONFIG.old"
     fi
+
+    echo "[CONFIG] Copying new config from $LY_SOURCE_CONFIG..."
+    # Ensure directory exists
+    sudo mkdir -p /etc/ly
+    sudo cp "$LY_SOURCE_CONFIG" "$LY_TARGET_CONFIG"
+    echo "[OK] Ly config updated."
 else
-    echo "[SKIP] Yay is not installed. Cannot install AUR packages."
+    echo "[WARNING] Ly source config file not found at $LY_SOURCE_CONFIG. Skipping config copy."
 fi
 
 echo ""
-echo "--- Setup Complete! ---"
+echo "--- Setup Complete! Reboot to see changes. ---"

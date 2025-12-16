@@ -7,7 +7,8 @@ binds {
 	Alt+Space hotkey-overlay-title="Apps" { spawn "fuzzel"; }
 	Mod+Space hotkey-overlay-title="Apps" { spawn "fuzzel"; }
 	Mod+B hotkey-overlay-title="Browse" { spawn "brave"; }
-	Mod+E hotkey-overlay-title="Files" { spawn "nautilus"; }
+	//Mod+E hotkey-overlay-title="Files" { spawn "nautilus"; }
+	Mod+E hotkey-overlay-title="Files" { spawn "dolphin"; }
 	Mod+Delete { spawn "wlogout"; }
 	Mod+Shift+L { spawn-sh "qs -c noctalia-shell ipc call lockScreen lock"; }
 	Mod+Ctrl+V { spawn-sh "cliphist list | fuzzel --dmenu | cliphist decode | wl-copy"; }

@@ -17,7 +17,6 @@ mpd
 mpd-mpris
 mpv
 mupdf
-nautilus
 neovim
 niri
 noctalia
@@ -53,3 +52,11 @@ wlogout
 yay-bin
 yelp
 yt-dlp
+binder_linux-dkms
+lib32-gtk2
+linutil
+logseq-desktop-bin
+matugen-git
+open-tv-bin
+python-pywal16
+rate-mirrors-bin

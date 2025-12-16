@@ -1,0 +1,1 @@
+../../git/kromid.kickstart.nvim/LICENSE.md
