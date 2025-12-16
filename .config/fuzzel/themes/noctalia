@@ -2,14 +2,14 @@
 # Generated with Matugen
 
 [colors]
-background=1a1110CC
-text=f1dedcff
-prompt=e7bdb8ff
-placeholder=e0c38cff
-input=ffb4abff
-match=e0c38cff
-selection=ffb4ab80
-selection-text=f1dedcff
-selection-match=561e19ff
-counter=e7bdb8ff
-border=ffb4abff
+background=121318CC
+text=e3e1e9ff
+prompt=c1c5ddff
+placeholder=e2bbdbff
+input=b5c4ffff
+match=e2bbdbff
+selection=b5c4ff80
+selection-text=e3e1e9ff
+selection-match=1c2d61ff
+counter=c1c5ddff
+border=b5c4ffff

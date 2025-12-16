@@ -2,6 +2,10 @@
 
 collection of my dotfiles for arch linux
 
+## clone repo
+
+mkdir -p ~/git && git clone https://github.com/kromidka/my.dotfiles.git ~/git/my.dotfiles
+
 ## install
 
 first run install srcipt:
@@ -23,6 +27,8 @@ than disable currnet dm
 `systemctl disable getty@tty2.service`
 
 ## random dolphin setup for niri
+
+dolphin doesn't show open with correctly on niri or wm-s this is the fix:
 
 `yay -S archlinux-xdg-menu`
 
