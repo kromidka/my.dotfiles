@@ -10,21 +10,31 @@ mkdir -p ~/git && git clone https://github.com/kromidka/my.dotfiles.git ~/git/my
 
 first run install srcipt:
 
-`chmod +x install.sh`
+```sh
+chmod +x install.sh
+```
 
 than:
 
-`./install.sh`
+```sh
+./install.sh
+```
 
 ## random dolphin setup for niri
 
 dolphin doesn't show open with correctly on niri or wm-s this is the fix:
 
-`yay -S archlinux-xdg-menu`
+```sh
+yay -S archlinux-xdg-menu
+```
 
-`XDG_MENU_PREFIX=arch- kbuildsycoca6`
+```sh
+XDG_MENU_PREFIX=arch- kbuildsycoca6
+```
 
-`ln -fs /etc/xdg/menus/*applications.menu ~/.config/menus/applications.menu`
+```sh
+ln -fs /etc/xdg/menus/*applications.menu ~/.config/menus/applications.menu
+```
 
 if kde instaled before hand just run last command!!!
 
@@ -32,4 +42,6 @@ if kde instaled before hand just run last command!!!
 
 this is brave template for clean brave prfile, just the way I like it.
 
-`cp -rf "~/git/my.dotfiles/default-Brave-profil/Profile 1/*" ~/.config/BraveSoftware/Brave-Browser/Default/`
+```sh
+cp -rf "~/git/my.dotfiles/default-Brave-profil/Profile 1/*" ~/.config/BraveSoftware/Brave-Browser/Default/
+```
