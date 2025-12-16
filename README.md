@@ -16,16 +16,6 @@ than:
 
 `./install.sh`
 
-## setup ly
-
-manuali cp config
-
-than disable currnet dm
-
-`systemctl enable ly@tty2.service`
-
-`systemctl disable getty@tty2.service`
-
 ## random dolphin setup for niri
 
 dolphin doesn't show open with correctly on niri or wm-s this is the fix:
