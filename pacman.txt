@@ -1,4 +1,5 @@
 advcpmv
+zsh
 awesome-terminal-fonts
 bitwarden
 brave-bin
@@ -34,7 +35,7 @@ swaybg
 swaync
 syncthing
 terminus-font
-trash
+trash-cli
 tree
 ttf-bitstream-vera
 ttf-dejavu
@@ -47,14 +48,15 @@ ttf-meslo-nerd
 ttf-opensans
 waybar
 wlogout
-yay-bin
 yelp
 yt-dlp
 binder_linux-dkms
 lib32-gtk2
-linutil
+linutil-bin
 logseq-desktop-bin
 matugen-git
 open-tv-bin
 python-pywal16
 rate-mirrors-bin
+paru-bin
+parui

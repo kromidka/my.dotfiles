@@ -138,5 +138,21 @@ else
     echo "[WARNING] Ly source config file not found at $LY_SOURCE_CONFIG. Skipping config copy."
 fi
 
+# --- 5. Set Zsh as Default Shell ---
+echo "--- Setting Zsh as default shell ---"
+if command -v zsh &> /dev/null; then
+    # Get the path to zsh
+    ZSH_PATH=$(which zsh)
+    # Check if current shell is already zsh to avoid unnecessary password prompts
+    if [ "$SHELL" != "$ZSH_PATH" ]; then
+        echo "[ACTION] Changing default shell to $ZSH_PATH..."
+        chsh -s "$ZSH_PATH"
+    else
+        echo "[SKIP] Zsh is already the default shell."
+    fi
+else
+    echo "[ERROR] Zsh is not installed."
+fi
+
 echo ""
 echo "--- Setup Complete! Reboot to see changes. ---"
