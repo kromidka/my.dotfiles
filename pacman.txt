@@ -7,12 +7,10 @@ btop
 cliphist
 fastfetch
 fuzzel
-gedit
 git
 github-cli
 gparted
 kitty
-logseq-desktop-bin
 ly
 mpd
 mpd-mpris
@@ -20,7 +18,6 @@ mpv
 mupdf
 neovim
 niri
-noctalia
 noctalia-shell
 noto-color-emoji-fontconfig
 noto-fonts
@@ -50,13 +47,6 @@ waybar
 wlogout
 yelp
 yt-dlp
-binder_linux-dkms
-lib32-gtk2
 linutil-bin
 logseq-desktop-bin
-matugen-git
 open-tv-bin
-python-pywal16
-rate-mirrors-bin
-paru-bin
-parui

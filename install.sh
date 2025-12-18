@@ -154,5 +154,16 @@ else
     echo "[ERROR] Zsh is not installed."
 fi
 
+echo "--- Setting path to new config ---"
+
+echo 'export ZDOTDIR="$HOME/.config/zsh"' > ~/.zshenv
+
+# --- 6. getting custum nvim setup ---
+echo "--- Custumizing nvim config ---"
+
+git clone https://github.com/kromidka/kromid.kickstart.nvim.git "${XDG_CONFIG_HOME:-$HOME/.config}"/nvim
+
+echo "--- nvim setup completed ---"
+
 echo ""
 echo "--- Setup Complete! Reboot to see changes. ---"
