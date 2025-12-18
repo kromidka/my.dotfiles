@@ -1,5 +1,5 @@
 advcpmv
-zsh
+archlinux-xdg-menu
 awesome-terminal-fonts
 bitwarden
 brave-bin
@@ -11,6 +11,7 @@ git
 github-cli
 gparted
 kitty
+logseq-desktop-bin
 ly
 mpd
 mpd-mpris
@@ -24,6 +25,7 @@ noto-fonts
 noto-fonts-cjk
 noto-fonts-emoji
 nsxiv
+open-tv-bin
 picard
 pv
 ripgrep
@@ -47,6 +49,4 @@ waybar
 wlogout
 yelp
 yt-dlp
-linutil-bin
-logseq-desktop-bin
-open-tv-bin
+zsh
