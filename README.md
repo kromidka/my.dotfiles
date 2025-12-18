@@ -4,7 +4,9 @@ collection of my dotfiles for arch linux
 
 ## clone repo
 
-mkdir -p ~/git && git clone https://github.com/kromidka/my.dotfiles.git ~/git/my.dotfiles
+```sh
+mkdir -p ~/git && git clone https://github.com/kromidka/my.dotfiles.git ~/git/my.dotfiles && chmod +x ~/git/my.dotfiles/install.sh
+```
 
 ## install
 
