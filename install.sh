@@ -165,5 +165,7 @@ git clone https://github.com/kromidka/kromid.kickstart.nvim.git "${XDG_CONFIG_HO
 
 echo "--- nvim setup completed ---"
 
+ln -snf ~/git/my.dotfiles/wall/ ~/Pictures/wall
+
 echo ""
 echo "--- Setup Complete! Reboot to see changes. ---"
