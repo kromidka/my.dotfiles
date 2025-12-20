@@ -201,6 +201,8 @@ alias docker-clean=' \
 alias hug="systemctl --user restart hugo"
 alias lanm="systemctl --user restart lan-mouse"
 
+alias clear="clear && fastfetch"
+
 #######################################################
 # FUNCTIONS
 #######################################################

@@ -167,7 +167,7 @@ echo "--- nvim setup completed ---"
 
 ln -snf ~/git/my.dotfiles/wall/ ~/Pictures/wall
 
-cp -rf ~/git/my.dotfiles/default-Brave-profil/'Profile 1'/* ~/.config/BraveSoftware/Brave-Browser/Default/
+# cp -rf ~/git/my.dotfiles/default-Brave-profil/'Profile 1'/* ~/.config/BraveSoftware/Brave-Browser/Default/
 
 echo ""
 echo "--- Setup Complete! Reboot to see changes. ---"

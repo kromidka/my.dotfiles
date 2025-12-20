@@ -25,7 +25,6 @@
         "volumeStep": 5
     },
     "bar": {
-        "backgroundOpacity": 0.08,
         "capsuleOpacity": 0.66,
         "density": "compact",
         "exclusive": true,
@@ -37,13 +36,19 @@
         "outerCorners": false,
         "position": "top",
         "showCapsule": true,
+        "showOutline": false,
+        "transparent": true,
         "widgets": {
             "center": [
                 {
+                    "characterCount": 2,
                     "colorizeIcons": true,
+                    "enableScrollWheel": true,
+                    "followFocusedScreen": false,
                     "hideUnoccupied": true,
-                    "id": "TaskbarGrouped",
+                    "id": "Workspace",
                     "labelMode": "name",
+                    "showApplications": true,
                     "showLabelsOnlyWhenOccupied": true
                 },
                 {
@@ -103,6 +108,7 @@
                     "showCpuTemp": true,
                     "showCpuUsage": true,
                     "showDiskUsage": false,
+                    "showGpuTemp": false,
                     "showMemoryAsPercent": false,
                     "showMemoryUsage": true,
                     "showNetworkStats": false,
@@ -128,6 +134,7 @@
                     ],
                     "colorizeIcons": false,
                     "drawerEnabled": true,
+                    "hidePassive": false,
                     "id": "Tray",
                     "pinned": [
                     ]
@@ -245,7 +252,15 @@
             ]
         }
     },
+    "desktopWidgets": {
+        "editMode": false,
+        "enabled": false,
+        "gridSnap": false,
+        "monitorWidgets": [
+        ]
+    },
     "dock": {
+        "animationSpeed": 1,
         "backgroundOpacity": 0.72,
         "colorizeIcons": false,
         "deadOpacity": 0.6,
@@ -287,6 +302,8 @@
     "hooks": {
         "darkModeChange": "",
         "enabled": false,
+        "screenLock": "",
+        "screenUnlock": "",
         "wallpaperChange": ""
     },
     "location": {
@@ -363,6 +380,7 @@
     "sessionMenu": {
         "countdownDuration": 5000,
         "enableCountdown": true,
+        "largeButtonsStyle": false,
         "position": "center",
         "powerOptions": [
             {
@@ -398,7 +416,7 @@
         ],
         "showHeader": true
     },
-    "settingsVersion": 26,
+    "settingsVersion": 31,
     "systemMonitor": {
         "cpuCriticalThreshold": 90,
         "cpuPollingInterval": 3000,
@@ -407,6 +425,10 @@
         "diskCriticalThreshold": 90,
         "diskPollingInterval": 3000,
         "diskWarningThreshold": 80,
+        "enableNvidiaGpu": false,
+        "gpuCriticalThreshold": 90,
+        "gpuPollingInterval": 3000,
+        "gpuWarningThreshold": 80,
         "memCriticalThreshold": 90,
         "memPollingInterval": 3000,
         "memWarningThreshold": 80,
@@ -430,6 +452,7 @@
         "gtk": true,
         "kcolorscheme": true,
         "kitty": false,
+        "mango": false,
         "niri": true,
         "pywalfox": false,
         "qt": true,
@@ -437,16 +460,18 @@
         "telegram": false,
         "vicinae": false,
         "walker": false,
-        "wezterm": false
+        "wezterm": false,
+        "yazi": false,
+        "zed": false
     },
     "ui": {
         "fontDefault": "MesloLGM Nerd Font",
         "fontDefaultScale": 1,
         "fontFixed": "MesloLGS Nerd Font Mono",
         "fontFixedScale": 1,
-        "panelBackgroundOpacity": 0.35000000000000003,
+        "panelBackgroundOpacity": 0.4,
         "panelsAttachedToBar": true,
-        "settingsPanelAttachToBar": false,
+        "settingsPanelMode": "centered",
         "tooltipsEnabled": true
     },
     "wallpaper": {

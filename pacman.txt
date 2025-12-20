@@ -10,7 +10,9 @@ fuzzel
 git
 github-cli
 gparted
+kate
 kitty
+konsave
 logseq-desktop-bin
 ly
 mpd
