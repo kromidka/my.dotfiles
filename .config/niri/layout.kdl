@@ -47,6 +47,12 @@ window-rule {
 }
 
 window-rule {
+	match title="^Picture-in-Picture$"
+	open-floating true
+	default-floating-position x=50 y=50 relative-to="bottom-right"
+}
+
+window-rule {
 	match app-id=r#"firefox$"# title="^Picture-in-picture$"
 	open-floating true
 }

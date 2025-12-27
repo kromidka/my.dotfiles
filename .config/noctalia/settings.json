@@ -103,6 +103,9 @@
                     "usePrimaryColor": false
                 },
                 {
+                    "id": "plugin:catwalk"
+                },
+                {
                     "diskPath": "/",
                     "id": "SystemMonitor",
                     "showCpuTemp": true,
@@ -147,6 +150,9 @@
                     "hideWhenZero": true,
                     "id": "NotificationHistory",
                     "showUnreadBadge": true
+                },
+                {
+                    "id": "plugin:network-indicator"
                 },
                 {
                     "colorizeDistroLogo": true,
@@ -254,9 +260,40 @@
     },
     "desktopWidgets": {
         "editMode": false,
-        "enabled": false,
+        "enabled": true,
         "gridSnap": false,
         "monitorWidgets": [
+            {
+                "name": "Virtual-1",
+                "widgets": [
+                    {
+                        "clockStyle": "digital",
+                        "customFont": "",
+                        "format": "HH:mm\\nd MMMM yyyy",
+                        "id": "Clock",
+                        "showBackground": false,
+                        "useCustomFont": false,
+                        "usePrimaryColor": false,
+                        "x": 1740,
+                        "y": 60
+                    },
+                    {
+                        "hideMode": "idle",
+                        "id": "MediaPlayer",
+                        "showBackground": false,
+                        "visualizerType": "wave",
+                        "visualizerVisibility": "always",
+                        "x": 1571,
+                        "y": 959
+                    },
+                    {
+                        "id": "Weather",
+                        "showBackground": false,
+                        "x": 1653,
+                        "y": 240
+                    }
+                ]
+            }
         ]
     },
     "dock": {

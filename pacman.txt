@@ -5,6 +5,7 @@ bitwarden
 brave-bin
 btop
 cliphist
+eassyeffects
 fastfetch
 fuzzel
 git

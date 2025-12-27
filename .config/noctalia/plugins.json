@@ -4,9 +4,20 @@
             "enabled": true,
             "name": "Official Noctalia Plugins",
             "url": "https://github.com/noctalia-dev/noctalia-plugins"
+        },
+        {
+            "enabled": false,
+            "name": "Bibe Plugins",
+            "url": "https://github.com/anthonyhab/noctalia-plugins"
         }
     ],
     "states": {
+        "catwalk": {
+            "enabled": true
+        },
+        "network-indicator": {
+            "enabled": true
+        }
     },
     "version": 1
 }

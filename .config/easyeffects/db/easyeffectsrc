@@ -1,0 +1,20 @@
+[Presets]
+lastLoadedOutputPreset=LoudnessCrystalEqualizer
+
+[StreamInputs]
+inputDevice=alsa_input.pci-0000_02_02.0.analog-stereo
+
+[StreamOutputs]
+mostUsedPresets=GentleDynamics,LoudnessCrystalEqualizer,LoudnessCrystalEqualizer-GTK,Boosted,Perfect EQ
+outputDevice=alsa_output.pci-0000_02_02.0.analog-stereo
+plugins=gate#0,compressor#0,multiband_compressor#0,crystalizer#0,equalizer#0,limiter#0
+usedPresets=GentleDynamics:8,GentleDynamics Feather Loudness:2,Perfect EQ:2,Boosted:2,LoudnessCrystalEqualizer:3,LoudnessCrystalEqualizer-GTK:2,GentleDynamics Dialogue Clarity Engine:1
+visiblePlugin=filter#0
+
+[Window]
+autostartOnLogin=true
+height=1033
+outputAutoloadingFallbackPreset=Loudness+Autogain
+outputAutoloadingUsesFallback=true
+visiblePipeWirePage=testSignalsPage
+width=1330
