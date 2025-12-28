@@ -5,7 +5,7 @@ binds {
 	Mod+Return hotkey-overlay-title="Terminal: kitty" { spawn "kitty"; }
 	Mod+D hotkey-overlay-title="Apps" { spawn "fuzzel"; }
 	Alt+Space hotkey-overlay-title="Apps" { spawn "fuzzel"; }
-	Mod+B hotkey-overlay-title="Browse" { spawn-sh "brave --password-store=kwallet6"; }
+	Mod+B hotkey-overlay-title="Browse" { spawn-sh "brave --password-store=kwallet5"; }
 	// Mod+B hotkey-overlay-title="Browse" { spawn "brave"; }
 	// Mod+Alt+B hotkey-overlay-title="Zen" { spawn "zen-browser"; }
 	Mod+Shift+B hotkey-overlay-title="BW" { spawn "bitwarden-desktop"; }

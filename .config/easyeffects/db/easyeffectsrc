@@ -8,7 +8,7 @@ inputDevice=bluez_input.08:EB:ED:A8:F7:B1
 mostUsedPresets=GentleDynamics,GentleDynamics Feather Loudness,LoudnessCrystalEqualizer,LoudnessCrystalEqualizer-GTK,Boosted
 outputDevice=bluez_output.08_EB_ED_A8_F7_B1.1
 plugins=filter#0,multiband_compressor#0,compressor#0,stereo_tools#0,limiter#0,level_meter#0
-usedPresets=GentleDynamics:8,GentleDynamics Feather Loudness:6,Perfect EQ:2,Boosted:2,LoudnessCrystalEqualizer:3,LoudnessCrystalEqualizer-GTK:2,GentleDynamics Dialogue Clarity Engine:1,Loudness+Autogain:1
+usedPresets=GentleDynamics:8,GentleDynamics Feather Loudness:7,Perfect EQ:2,Boosted:2,LoudnessCrystalEqualizer:3,LoudnessCrystalEqualizer-GTK:2,GentleDynamics Dialogue Clarity Engine:1,Loudness+Autogain:1
 visiblePlugin=filter#0
 
 [Window]

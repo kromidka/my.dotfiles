@@ -130,6 +130,7 @@ alias snano='sudo nano'
 
 alias yayf="yay -Slq | fzf --multi --preview 'yay -Sii {1}' --preview-window=down:75% | xargs -ro yay -S"
 
+alias cd='z'
 alias home='cd ~'
 alias cd..='cd ..'
 alias ..='cd ..'
