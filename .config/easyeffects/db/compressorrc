@@ -1,12 +1,21 @@
 [soe][Compressor#0]
-attack=130
+attack=30
+boostAmount=1.499999761581421
 boostThreshold=-60
-knee=-24
-mode=1
-ratio=5
-release=600
+dry=0
+hpfFrequency=200
+hpfMode=2
+lpfFrequency=6000
+lpfMode=2
+makeup=2
+outputGain=-1
+ratio=1.5
+release=180
+releaseThreshold=-25
 sidechainMode=1
-threshold=-10
+sidechainReactivity=30
+threshold=-14
+wet=-25
 
 [soe][Compressor#1]
 attack=35

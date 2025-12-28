@@ -5,7 +5,7 @@ input {
 		numlock
  	xkb {
 		layout "us, hr, rs"
-		options "grp:alt_shift_toggle"
+		options "grp:win_space_toggle"
         }
 
 	}

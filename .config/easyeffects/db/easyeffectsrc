@@ -1,20 +1,20 @@
 [Presets]
-lastLoadedOutputPreset=LoudnessCrystalEqualizer
+lastLoadedOutputPreset=GentleDynamics Feather Loudness
 
 [StreamInputs]
-inputDevice=alsa_input.pci-0000_02_02.0.analog-stereo
+inputDevice=bluez_input.08:EB:ED:A8:F7:B1
 
 [StreamOutputs]
-mostUsedPresets=GentleDynamics,LoudnessCrystalEqualizer,LoudnessCrystalEqualizer-GTK,Boosted,Perfect EQ
-outputDevice=alsa_output.pci-0000_02_02.0.analog-stereo
-plugins=gate#0,compressor#0,multiband_compressor#0,crystalizer#0,equalizer#0,limiter#0
-usedPresets=GentleDynamics:8,GentleDynamics Feather Loudness:2,Perfect EQ:2,Boosted:2,LoudnessCrystalEqualizer:3,LoudnessCrystalEqualizer-GTK:2,GentleDynamics Dialogue Clarity Engine:1
+mostUsedPresets=GentleDynamics,GentleDynamics Feather Loudness,LoudnessCrystalEqualizer,LoudnessCrystalEqualizer-GTK,Boosted
+outputDevice=bluez_output.08_EB_ED_A8_F7_B1.1
+plugins=filter#0,multiband_compressor#0,compressor#0,stereo_tools#0,limiter#0,level_meter#0
+usedPresets=GentleDynamics:8,GentleDynamics Feather Loudness:6,Perfect EQ:2,Boosted:2,LoudnessCrystalEqualizer:3,LoudnessCrystalEqualizer-GTK:2,GentleDynamics Dialogue Clarity Engine:1,Loudness+Autogain:1
 visiblePlugin=filter#0
 
 [Window]
 autostartOnLogin=true
 height=1033
-outputAutoloadingFallbackPreset=Loudness+Autogain
+outputAutoloadingFallbackPreset=Perfect EQ
 outputAutoloadingUsesFallback=true
 visiblePipeWirePage=testSignalsPage
 width=1330

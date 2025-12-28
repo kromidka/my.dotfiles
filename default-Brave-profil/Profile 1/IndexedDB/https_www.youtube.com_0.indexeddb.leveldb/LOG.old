@@ -1,14 +1,3 @@
-2025/12/06-18:42:14.341 52536 Reusing MANIFEST /home/kromid/.config/BraveSoftware/Brave-Browser/Profile 1/IndexedDB/https_www.youtube.com_0.indexeddb.leveldb/MANIFEST-000001
-2025/12/06-18:42:14.341 52536 Recovering log #28
-2025/12/06-18:42:14.348 52536 Reusing old log /home/kromid/.config/BraveSoftware/Brave-Browser/Profile 1/IndexedDB/https_www.youtube.com_0.indexeddb.leveldb/000028.log 
-2025/12/06-18:42:14.348 52536 Delete type=2 #27
-2025/12/06-18:42:14.350 52536 Delete type=2 #29
-2025/12/06-19:17:13.369 52536 Level-0 table #33: started
-2025/12/06-19:17:13.388 52536 Level-0 table #33: 1812811 bytes OK
-2025/12/06-19:17:13.392 52536 Delete type=0 #28
-2025/12/06-19:34:15.908 52534 Compacting 1@1 + 1@2 files
-2025/12/06-19:34:15.919 52534 Generated table #34@1: 327 keys, 34617 bytes
-2025/12/06-19:34:15.919 52534 Compacted 1@1 + 1@2 files => 34617 bytes
-2025/12/06-19:34:15.922 52534 compacted to: files[ 0 0 1 0 0 0 0 ]
-2025/12/06-19:34:15.922 52534 Delete type=2 #33
-2025/12/06-19:34:15.922 52534 Delete type=2 #30
+2025/12/06-19:46:13.129 52534 Reusing MANIFEST /home/kromid/.config/BraveSoftware/Brave-Browser/Profile 1/IndexedDB/https_www.youtube.com_0.indexeddb.leveldb/MANIFEST-000001
+2025/12/06-19:46:13.129 52534 Recovering log #32
+2025/12/06-19:46:13.137 52534 Reusing old log /home/kromid/.config/BraveSoftware/Brave-Browser/Profile 1/IndexedDB/https_www.youtube.com_0.indexeddb.leveldb/000032.log 

@@ -1,2 +1,3 @@
-2025/12/06-16:39:31.980 5749 Creating DB /home/kromid/.config/BraveSoftware/Brave-Browser/Profile 1/Platform Notifications since it was missing.
-2025/12/06-16:39:31.991 5749 Reusing MANIFEST /home/kromid/.config/BraveSoftware/Brave-Browser/Profile 1/Platform Notifications/MANIFEST-000001
+2025/12/06-18:42:10.628 52548 Reusing MANIFEST /home/kromid/.config/BraveSoftware/Brave-Browser/Profile 1/Platform Notifications/MANIFEST-000001
+2025/12/06-18:42:10.629 52548 Recovering log #3
+2025/12/06-18:42:10.629 52548 Reusing old log /home/kromid/.config/BraveSoftware/Brave-Browser/Profile 1/Platform Notifications/000003.log 

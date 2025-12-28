@@ -1,9 +1,4 @@
-2025/12/06-18:42:10.268 5 Reusing MANIFEST /home/kromid/.config/BraveSoftware/Brave-Browser/Profile 1/Local Storage/leveldb/MANIFEST-000001
-2025/12/06-18:42:10.274 5 Recovering log #3
-2025/12/06-18:42:10.275 5 Reusing old log /home/kromid/.config/BraveSoftware/Brave-Browser/Profile 1/Local Storage/leveldb/000003.log 
-2025/12/06-19:21:44.165 5 Level-0 table #5: started
-2025/12/06-19:21:44.177 5 Level-0 table #5: 13745 bytes OK
-2025/12/06-19:21:44.181 5 Delete type=0 #3
-2025/12/06-19:53:15.884 5 Level-0 table #7: started
-2025/12/06-19:53:15.905 5 Level-0 table #7: 20071 bytes OK
-2025/12/06-19:53:15.916 5 Delete type=0 #4
+2025/12/27-15:50:09.221 5 Reusing MANIFEST /home/kromid/.config/BraveSoftware/Brave-Browser/Default/Local Storage/leveldb/MANIFEST-000001
+2025/12/27-15:50:09.224 5 Recovering log #6
+2025/12/27-15:50:09.225 5 Reusing old log /home/kromid/.config/BraveSoftware/Brave-Browser/Default/Local Storage/leveldb/000006.log 
+2025/12/27-15:50:09.225 5 Delete type=0 #3
