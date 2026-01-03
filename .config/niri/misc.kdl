@@ -5,9 +5,15 @@ environment {
         XDG_SESSION_TYPE "wayland"
         XDG_CURRENT_DESKTOP "niri"
         QT_QPA_PLATFORMTHEME "gtk3"
-    }
+}
 
     debug {
         // Allows notification actions and window activation from Noctalia.
         honor-xdg-activation-with-invalid-serial
     }
+
+ cursor {
+    xcursor-theme "BreezeX-Black"
+    xcursor-size 28
+    hide-after-inactive-ms 3000
+}   

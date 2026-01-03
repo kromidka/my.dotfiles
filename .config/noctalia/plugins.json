@@ -14,9 +14,6 @@
     "states": {
         "catwalk": {
             "enabled": true
-        },
-        "network-indicator": {
-            "enabled": true
         }
     },
     "version": 1

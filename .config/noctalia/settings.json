@@ -25,6 +25,7 @@
         "volumeStep": 5
     },
     "bar": {
+        "backgroundOpacity": 0,
         "capsuleOpacity": 0.66,
         "density": "compact",
         "exclusive": true,
@@ -37,7 +38,7 @@
         "position": "top",
         "showCapsule": true,
         "showOutline": false,
-        "transparent": true,
+        "useSeparateOpacity": true,
         "widgets": {
             "center": [
                 {
@@ -45,11 +46,13 @@
                     "colorizeIcons": true,
                     "enableScrollWheel": true,
                     "followFocusedScreen": false,
+                    "groupedBorderOpacity": 1,
                     "hideUnoccupied": true,
                     "id": "Workspace",
                     "labelMode": "name",
                     "showApplications": true,
-                    "showLabelsOnlyWhenOccupied": true
+                    "showLabelsOnlyWhenOccupied": true,
+                    "unfocusedIconsOpacity": 1
                 },
                 {
                     "hideMode": "hidden",
@@ -99,13 +102,19 @@
                     "formatHorizontal": "HH:mm ddd, dd.MM",
                     "formatVertical": "HH mm - dd MM",
                     "id": "Clock",
+                    "tooltipFormat": "HH:mm ddd, MMM dd",
                     "useCustomFont": false,
                     "usePrimaryColor": false
                 },
                 {
+                    "defaultSettings": {
+                        "hideBackground": false,
+                        "minimumThreshold": 10
+                    },
                     "id": "plugin:catwalk"
                 },
                 {
+                    "compactMode": true,
                     "diskPath": "/",
                     "id": "SystemMonitor",
                     "showCpuTemp": true,
@@ -114,11 +123,9 @@
                     "showGpuTemp": false,
                     "showMemoryAsPercent": false,
                     "showMemoryUsage": true,
-                    "showNetworkStats": false,
+                    "showNetworkStats": true,
+                    "useMonospaceFont": true,
                     "usePrimaryColor": false
-                },
-                {
-                    "id": "plugin:network-indicator"
                 },
                 {
                     "colorizeIcons": false,
@@ -132,7 +139,7 @@
             ],
             "right": [
                 {
-                    "displayMode": "forceOpen",
+                    "displayMode": "onhover",
                     "id": "KeyboardLayout"
                 },
                 {
@@ -143,6 +150,7 @@
                     "hidePassive": false,
                     "id": "Tray",
                     "pinned": [
+                        "Easy Effects"
                     ]
                 },
                 {
@@ -150,11 +158,7 @@
                     "id": "Volume"
                 },
                 {
-                    "displayMode": "onhover",
-                    "id": "Brightness"
-                },
-                {
-                    "hideWhenZero": false,
+                    "hideWhenZero": true,
                     "id": "NotificationHistory",
                     "showUnreadBadge": true
                 },
@@ -229,15 +233,15 @@
             },
             {
                 "enabled": true,
+                "id": "brightness-card"
+            },
+            {
+                "enabled": true,
                 "id": "weather-card"
             },
             {
                 "enabled": true,
                 "id": "media-sysmon-card"
-            },
-            {
-                "enabled": false,
-                "id": "brightness-card"
             }
         ],
         "position": "top_right",
@@ -332,6 +336,7 @@
                     },
                     {
                         "id": "Weather",
+                        "scale": 0.9387174122971659,
                         "showBackground": false,
                         "x": 1680,
                         "y": 299
@@ -344,8 +349,8 @@
                         "id": "plugin:catwalk",
                         "scale": 0.5,
                         "showBackground": true,
-                        "x": 1811,
-                        "y": 923
+                        "x": 1708,
+                        "y": 886
                     }
                 ]
             }
@@ -402,7 +407,7 @@
     },
     "location": {
         "analogClockInCalendar": false,
-        "firstDayOfWeek": -1,
+        "firstDayOfWeek": 1,
         "name": "zagreb",
         "showCalendarEvents": true,
         "showCalendarWeather": true,
@@ -436,6 +441,11 @@
         "normalUrgencyDuration": 8,
         "overlayLayer": true,
         "respectExpireTimeout": false,
+        "saveToHistory": {
+            "critical": true,
+            "low": true,
+            "normal": true
+        },
         "sounds": {
             "criticalSoundFile": "",
             "enabled": false,
@@ -453,7 +463,9 @@
         "enabledTypes": [
             0,
             1,
-            2
+            2,
+            3,
+            4
         ],
         "location": "top_right",
         "monitors": [
@@ -464,6 +476,7 @@
         "audioCodec": "opus",
         "audioSource": "default_output",
         "colorRange": "limited",
+        "copyToClipboard": false,
         "directory": "/home/kromid/Videos",
         "frameRate": 60,
         "quality": "very_high",
@@ -473,8 +486,8 @@
     },
     "sessionMenu": {
         "countdownDuration": 5000,
-        "enableCountdown": true,
-        "largeButtonsStyle": false,
+        "enableCountdown": false,
+        "largeButtonsStyle": true,
         "position": "center",
         "powerOptions": [
             {
@@ -514,15 +527,17 @@
                 "enabled": true
             }
         ],
-        "showHeader": true
+        "showHeader": true,
+        "showNumberLabels": true
     },
-    "settingsVersion": 32,
+    "settingsVersion": 35,
     "systemMonitor": {
-        "cpuCriticalThreshold": 90,
+        "cpuCriticalThreshold": 80,
         "cpuPollingInterval": 3000,
         "cpuWarningThreshold": 80,
         "criticalColor": "#ffb4ab",
         "diskCriticalThreshold": 90,
+        "diskPath": "/",
         "diskPollingInterval": 3000,
         "diskWarningThreshold": 80,
         "enableDgpuMonitoring": false,
@@ -532,9 +547,9 @@
         "memCriticalThreshold": 90,
         "memPollingInterval": 3000,
         "memWarningThreshold": 80,
-        "networkPollingInterval": 3000,
-        "tempCriticalThreshold": 90,
-        "tempPollingInterval": 3000,
+        "networkPollingInterval": 1500,
+        "tempCriticalThreshold": 80,
+        "tempPollingInterval": 250,
         "tempWarningThreshold": 80,
         "useCustomColors": true,
         "warningColor": "#d9bde3"
@@ -568,7 +583,7 @@
     },
     "ui": {
         "bluetoothDetailsViewMode": "grid",
-        "bluetoothHideUnnamedDevices": false,
+        "bluetoothHideUnnamedDevices": true,
         "fontDefault": "MesloLGM Nerd Font",
         "fontDefaultScale": 1,
         "fontFixed": "MesloLGS Nerd Font Mono",
@@ -598,6 +613,7 @@
         "transitionEdgeSmoothness": 0.05,
         "transitionType": "stripes",
         "useWallhaven": false,
+        "wallhavenApiKey": "",
         "wallhavenCategories": "111",
         "wallhavenOrder": "desc",
         "wallhavenPurity": "100",
@@ -606,6 +622,7 @@
         "wallhavenResolutionHeight": "",
         "wallhavenResolutionMode": "atleast",
         "wallhavenResolutionWidth": "",
-        "wallhavenSorting": "relevance"
+        "wallhavenSorting": "relevance",
+        "wallpaperChangeMode": "random"
     }
 }

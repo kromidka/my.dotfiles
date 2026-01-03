@@ -5,11 +5,11 @@
 background=131314CC
 text=e4e2e3ff
 prompt=c3c6cfff
-placeholder=bbc7dbff
-input=bfc7d5ff
-match=bbc7dbff
-selection=bfc7d580
+placeholder=bcc7dbff
+input=c0c7d5ff
+match=bcc7dbff
+selection=c0c7d580
 selection-text=e4e2e3ff
-selection-match=29313cff
+selection-match=2a313cff
 counter=c3c6cfff
-border=bfc7d5ff
+border=c0c7d5ff
