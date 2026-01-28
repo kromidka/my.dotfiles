@@ -13,3 +13,7 @@ export LANG="en_US.UTF-8"
 export LC_TIME="en_DK.UTF-8"
 export LC_MESSAGES="en_US.UTF-8"
 export LC_NUMERIC="en_DK.UTF-8"
+
+# Other options
+export PATH="$HOME/.local/bin:$PATH"
+

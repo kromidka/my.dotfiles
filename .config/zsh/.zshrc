@@ -204,6 +204,18 @@ alias lanm="systemctl --user restart lan-mouse"
 
 alias clear="clear && fastfetch"
 
+alias -s md=cat
+alias -s txt=cat
+alias -s log=cat
+alias -s conf=v
+alias -s typ=v
+alias -s lua=v
+alias -s ini=v
+alias -s kdl=v
+alias -s ron=v
+alias -s jsonc=v
+
+
 #######################################################
 # FUNCTIONS
 #######################################################

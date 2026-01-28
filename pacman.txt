@@ -33,7 +33,6 @@ picard
 pv
 ripgrep
 rmpc
-swaybg
 swaync
 syncthing
 terminus-font
@@ -48,7 +47,6 @@ ttf-jetbrains-mono-nerd
 ttf-liberation
 ttf-meslo-nerd
 ttf-opensans
-waybar
 wlogout
 yelp
 yt-dlp

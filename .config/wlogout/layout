@@ -12,7 +12,7 @@
 }
 {
     "label" : "suspend",
-    "action" : "systemctl suspend",
+    "action" : "qs -c noctalia-shell ipc call lockScreen lock && systemctl suspend",
     "text" : "Suspend",
     "keybind" : "u"
 }

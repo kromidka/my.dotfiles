@@ -66,7 +66,13 @@ layer-rule {
 	match namespace="^noctalia-overview*"
 	place-within-backdrop true
 	}
+
 window-rule {
 	match app-id="^brave*"
 	default-column-width { proportion 0.8;}
+}
+
+window-rule {
+	match app-id="^affinity*"
+	open-maximized true
 }
