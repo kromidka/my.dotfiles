@@ -69,10 +69,31 @@ layer-rule {
 
 window-rule {
 	match app-id="^brave*"
-	default-column-width { proportion 0.8;}
+	// default-column-width { proportion 0.8;}
+	open-maximized true
 }
 
 window-rule {
 	match app-id="^affinity*"
 	open-maximized true
+}
+
+window-rule {
+    match app-id="mpv"
+    open-maximized true
+}
+
+window-rule {
+	match app-id="org.kde.kcalc"
+	open-floating true
+}
+
+window-rule {
+	match title="^Bitwarden$"
+	open-floating true
+}
+
+window-rule {
+	match app-id="brave-nngceckbapebfimnlniiiahkandclblb-Default"
+	open-floating true
 }
