@@ -144,23 +144,54 @@ alias ....='cd ../../..'
 alias .....='cd ../../../..'
 alias bd='cd "$OLDPWD"'
 
-alias la='ls -Alh'
-alias ls='ls -aFh --color=always'
-alias lx='ls -lXBh'
-alias lk='ls -lSrh'
-alias lc='ls -ltcrh'
-alias lu='ls -lturh'
-alias lr='ls -lRh'
-alias lt='ls -ltrh'
-alias lm='ls -alh |more'
-alias lw='ls -xAh'
-alias ll='ls -Fls'
-alias labc='ls -lap'
-alias lf="ls -l | egrep -v '^d'"
-alias ldir="ls -l | egrep '^d'"
-alias lla='ls -Al'
-alias las='ls -A'
-alias lls='ls -l'
+# Core replacements
+alias ls='eza --icons --group-directories-first --color=always'
+alias la='eza -abghH --icons --git --group-directories-first'
+alias ll='eza -lg --icons --group-directories-first'
+alias lla='eza -lag --icons --group-directories-first'
+alias lls='eza -l --icons'
+
+# Sorting and Specialized views
+alias lx='eza -lbhHigU --icons --sort=extension'   # Sort by extension
+alias lk='eza -lbhHigU --icons --sort=size'        # Sort by size (largest at bottom)
+alias lc='eza -lbhHigU --icons --sort=changed'     # Sort by changed time
+alias lu='eza -lbhHigU --icons --sort=accessed'    # Sort by access time
+alias lt='eza -lbhHigU --icons --sort=modified'    # Sort by modification time (newest at bottom)
+alias lr='eza -R --icons'                          # Recursive view
+alias lw='eza -x --icons'                          # Horizontal/Wide grid
+
+# Paging and Legacy styles
+alias lm='eza -la --icons | cat'                  # Replaced more with less
+alias labc='eza -lap --icons'                      # List all with file type indicators
+
+# Functional filtering (eza has these built-in!)
+alias lf='eza -l --icons --only-files'             # Files only (no more egrep!)
+alias ldir='eza -l --icons --only-dirs'            # Directories only (no more egrep!)
+
+# Fast view
+alias las='eza -a --icons'
+
+# alias la='ls -Alhg'
+# alias ls='ls -aFh --color=always'
+# alias lx='ls -lXBh'
+# alias lk='ls -lSrh'
+# alias lc='ls -ltcrh'
+# alias lu='ls -lturh'
+# alias lr='ls -lRh'
+# alias lt='ls -ltrh'
+# alias lm='ls -alh |more'
+# alias lw='ls -xAh'
+# alias ll='ls -Flsg'
+# alias labc='ls -lap'
+# alias lf="ls -l | egrep -v '^d'"
+# alias ldir="ls -l | egrep '^d'"
+# alias lla='ls -Al'
+# alias las='ls -A'
+# alias lls='ls -l'
+
+alias yt-dlp="yt-dlp --config-location ~/.config/yt-dlp/yt-dlp.conf"
+alias ytdl="yt-dlp --config-location ~/.config/yt-dlp/yt-dlp.conf"
+alias yt="yt-dlp --config-location ~/.config/yt-dlp/yt-dlp.conf"
 
 alias mx='chmod a+x'
 alias 000='chmod -R 000'

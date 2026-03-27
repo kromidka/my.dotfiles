@@ -1,0 +1,8 @@
+# After 2 minutes (120s), dim the screen. Resume on activity.
+timeout 120 'ddcutil --bus 6 setvcp 10 15' resume 'ddcutil --bus 6 setvcp 10 100'
+
+# After 15 minutes (900s), turn monitors off.
+# timeout 1900 'niri msg action power-off-monitors' resume 'ddcutil --bus 6 setvcp 10 100 && niri msg action power-on-monitors'
+
+# Lock/Power off before system sleep
+# before-sleep 'niri msg action power-off-monitors'
