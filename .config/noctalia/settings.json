@@ -14,7 +14,7 @@
         "enableSessionSearch": true,
         "enableSettingsSearch": true,
         "enableWindowsSearch": true,
-        "iconMode": "tabler",
+        "iconMode": "native",
         "ignoreMouseInput": false,
         "overviewLayer": false,
         "pinnedApps": [
@@ -30,7 +30,7 @@
         "showIconBackground": false,
         "sortByMostUsed": true,
         "terminalCommand": "kitty -e",
-        "viewMode": "grid"
+        "viewMode": "list"
     },
     "audio": {
         "mprisBlacklist": [
@@ -167,10 +167,16 @@
                 },
                 {
                     "defaultSettings": {
-                        "hideBackground": false,
-                        "minimumThreshold": 10
+                        "apiKey": "",
+                        "apiUrl": "",
+                        "configPath": "",
+                        "enabled": true,
+                        "folderIds": [
+                        ],
+                        "pollIntervalMs": 10000,
+                        "verifyTls": false
                     },
-                    "id": "plugin:catwalk"
+                    "id": "plugin:syncthing-status"
                 },
                 {
                     "compactMode": true,
@@ -332,6 +338,9 @@
                 },
                 {
                     "id": "PowerProfile"
+                },
+                {
+                    "id": "NoctaliaPerformance"
                 }
             ],
             "right": [
@@ -423,17 +432,6 @@
                         "showBackground": false,
                         "x": 1661,
                         "y": 296
-                    },
-                    {
-                        "defaultSettings": {
-                            "hideBackground": false,
-                            "minimumThreshold": 10
-                        },
-                        "id": "plugin:catwalk",
-                        "scale": 0.5,
-                        "showBackground": true,
-                        "x": 1708,
-                        "y": 886
                     }
                 ]
             }
@@ -559,7 +557,7 @@
         "resumeScreenOffCommand": "",
         "resumeSuspendCommand": "",
         "screenOffCommand": "",
-        "screenOffTimeout": 1500,
+        "screenOffTimeout": 1499,
         "suspendCommand": "",
         "suspendTimeout": 0
     },

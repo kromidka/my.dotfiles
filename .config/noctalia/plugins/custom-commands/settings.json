@@ -1,0 +1,14 @@
+{
+  "commands": [
+    {
+      "name": "Mount",
+      "command": "sh -lc 'pass=$(fuzzel --minimal-lines --dmenu --password --prompt \"Sudo Password: \"); [ -n \"$pass\" ] && echo \"$pass\" | sudo -S mount -a'",
+      "icon": "folder"
+    },
+    {
+      "name": "System Monitor",
+      "command": "gnome-system-monitor || plasma-systemmonitor || xfce4-taskmanager",
+      "icon": "activity"
+    }
+  ]
+}

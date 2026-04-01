@@ -2,27 +2,34 @@ binds {
 	Mod+Shift+Slash { show-hotkey-overlay; }
 
 	Mod+T hotkey-overlay-title="Terminal: kitty" { spawn "kitty"; }
+	Mod+Shift+T { spawn-sh "kitty --class float"; }
 	Mod+Return hotkey-overlay-title="Terminal: kitty" { spawn "kitty"; }
-	// Mod+Alt+Return { spawn-sh "kitty --class=floating-kitty"; }
-	Mod+D hotkey-overlay-title="Apps" { spawn "fuzzel"; }
-	Alt+Space hotkey-overlay-title="Apps" { spawn "fuzzel"; }
+	Mod+D repeat=false hotkey-overlay-title="Apps" { spawn-sh "fuzzel-helper.sh"; }
+	Alt+Space hotkey-overlay-title="Apps" { spawn-sh "qs -c noctalia-shell ipc call launcher toggle"; }
 	Mod+B hotkey-overlay-title="Browse" { spawn "brave"; }
-	// Mod+B hotkey-overlay-title="Browse" { spawn "brave"; }
 	Mod+Alt+B hotkey-overlay-title="Zen" { spawn "zen-browser"; }
 	Mod+Shift+B hotkey-overlay-title="BW" { spawn "bitwarden-desktop"; }
 	//Mod+E hotkey-overlay-title="Files" { spawn "nautilus"; }
 	Mod+E hotkey-overlay-title="Files" { spawn "dolphin"; }
-	Mod+Ctrl+E hotkey-overlay-title="Files" { spawn "easyeffects"; }
+	Mod+Ctrl+E hotkey-overlay-title="Easy-Effects" { spawn "easyeffects"; }
 	// Mod+Delete { spawn "wlogout"; }
 	Mod+Delete { spawn-sh "qs -c noctalia-shell ipc call sessionMenu toggle"; }
 	Mod+Shift+D { spawn-sh "qs -c noctalia-shell ipc call sessionMenu toggle"; }
 	Mod+L { spawn-sh "qs -c noctalia-shell ipc call lockScreen lock"; }
-	Mod+Ctrl+V { spawn-sh "cliphist list | fuzzel --dmenu | cliphist decode | wl-copy"; }
+	// Mod+Ctrl+V { spawn-sh "cliphist list | fuzzel --dmenu | cliphist decode | wl-copy"; }
+	// Mod+Ctrl+V { spawn-sh "bash -c pkill fuzzel || cliphist-fuzzel-img"; }
+	Mod+Ctrl+V { spawn "toggle-fuzzel"; }
+        Mod+P { spawn-sh "easyeffects --bypass-toggle"; }
+        Mod+Shift+P { spawn-sh "easyeffects -rws"; }
+        Mod+M { spawn "alacritty" "--class" "rmpc-float" "-e" "rmpc"; }
+	Mod+Alt+F { spawn-sh "nirius toggle-follow-mode"; }
+
 
 	Mod+Z {spawn-sh "ddcutil --bus 6 setvcp 10 100"; }
 	Mod+Shift+Z {spawn-sh "ddcutil --bus 6 setvcp 10 70"; }
 	
 	Mod+O repeat=false { toggle-overview; }
+	Ctrl+Tab repeat=false { toggle-overview; }
 	Mod+Q repeat=false { close-window; }
 
 	Mod+Left  { focus-column-left; }
@@ -148,10 +155,10 @@ binds {
 	//
 	// The allow-inhibiting=false property can be applied to other binds as well,
 	// which ensures niri always processes them, even when an inhibitor is active.
-	Mod+Escape allow-inhibiting=false { toggle-keyboard-shortcuts-inhibit; }
+	// Mod+Escape allow-inhibiting=false { toggle-keyboard-shortcuts-inhibit; }
 	
 	Mod+Shift+E { quit; }
-	Ctrl+Alt+Delete { quit; }
+	// Ctrl+Alt+Delete { quit; }
 
 
        // Example volume keys mappings for PipeWire & WirePlumber.

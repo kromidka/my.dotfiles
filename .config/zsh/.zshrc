@@ -107,6 +107,9 @@ export LESS_TERMCAP_us=$'\E[01;32m'
 # ALIASES
 #######################################################
 
+alias img='nsxiv -t .'
+alias i='nsxiv'
+
 alias web='cd /var/www/html'
 alias ebrc='nvim $ZDOTDIR/.zshrc'
 alias eplg='nvim $ZDOTDIR/.zsh_plugins.txt'
