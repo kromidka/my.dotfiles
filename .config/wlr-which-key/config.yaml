@@ -80,6 +80,6 @@ menu:
           cmd: ~/git/my.dotfiles/install.sh -l
 
 
-background: "#181211b2"
-color: "#ede0dd"
-border: "#ffb4a4"
+background: "#121316b2"
+color: "#e3e2e6"
+border: "#a6c8ff"

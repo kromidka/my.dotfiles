@@ -2,5 +2,5 @@
 if pgrep -x "fuzzel" > /dev/null; then
     pkill -x "fuzzel"
 else
-    cliphist-fuzzel-img
+   fuzzel 
 fi

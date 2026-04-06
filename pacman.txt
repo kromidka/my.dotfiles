@@ -71,3 +71,4 @@ yazi
 typst
 tldr
 nwg-look
+keyd
