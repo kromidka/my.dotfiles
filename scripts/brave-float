@@ -1,0 +1,11 @@
+#!/bin/bash
+
+# Using --app with a dummy URL forces a unique window identity.
+# We also use --user-data-dir to ensure it doesn't just attach 
+# to your existing tiled Brave instance.
+
+brave --app="https://duckduckgo.com/" \
+      --class="brave-float" \
+      --app-id="brave-float" \
+      --ozone-platform-hint=auto \
+      "$@"

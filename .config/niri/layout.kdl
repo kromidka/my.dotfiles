@@ -44,12 +44,8 @@ window-rule {
 	match title="^Picture in picture$"
 	open-floating true
 	default-floating-position x=50 y=50 relative-to="bottom-right"
-}
-
-window-rule {
-	match title="^Picture-in-Picture$"
-	open-floating true
-	default-floating-position x=50 y=50 relative-to="bottom-right"
+	default-column-width { fixed 485; }
+	default-window-height { fixed 276; }
 }
 
 window-rule {
@@ -111,3 +107,24 @@ window-rule {
     default-column-width { fixed 1000; }
     default-window-height { fixed 600; }
 }
+
+window-rule {
+    match app-id="org.telegram.desktop"
+    open-floating true
+    default-column-width { fixed 600; }
+    default-window-height { fixed 1000; }
+    default-floating-position x=50 y=50 relative-to="bottom-right"
+}
+
+window-rule {
+    match app-id="brave-duckduckgo.com__-Default"
+    open-floating true
+    default-column-width { fixed 1000; }
+    default-window-height { fixed 600; }
+}
+
+window-rule {
+	match app-id="nl.jknaapen.fladder"
+	open-maximized true
+}
+

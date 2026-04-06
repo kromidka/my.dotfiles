@@ -1,0 +1,3 @@
+background: "{{colors.background.default.hex}}b2"
+color: "{{colors.on_surface.default.hex}}"
+border: "{{colors.primary.default.hex}}"

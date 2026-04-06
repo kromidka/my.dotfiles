@@ -1,0 +1,10 @@
+[Desktop Entry]
+Name=Mending Wall
+Exec=flatpak run --command=/app/bin/mendingwallcli org.indii.mendingwall --restore --watch
+Icon=org.indii.mendingwall
+Comment=Restore themes and menus at initialization, then watch themes and menus
+Terminal=false
+Type=Application
+Categories=Settings
+Keywords=;
+NotShowIn=KDE

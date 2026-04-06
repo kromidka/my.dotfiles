@@ -1,0 +1,78 @@
+# Theming
+font: MesloLGS Nerd Font 12
+
+separator: "  "
+border_width: 2
+corner_r: 10
+padding: 15 # Defaults to corner_r
+rows_per_column: 5 # No limit by default
+column_padding: 25 # Defaults to padding
+
+# Anchor and margin
+anchor: center # One of center, left, right, top, bottom, bottom-left, top-left, etc.
+# Only relevant when anchor is not center
+margin_right: 0
+margin_bottom: 0
+margin_left: 0
+margin_top: 0
+
+# namespace to use for the layer shell surface
+# namespace: "wlr_which_key"
+
+# Permits key bindings that conflict with compositor key bindings.
+# Default is `false`.
+inhibit_compositor_keyboard_shortcuts: false 
+
+# Try to guess the correct keyboard layout to use. Default is `false`.
+auto_kbd_layout: true
+
+menu:
+  - key: "a"
+    desc: Audio
+    submenu:
+      - key: "e"
+        desc: EasyEffects
+        submenu:
+          - key: "e"
+            desc: "EasyEffects"
+            cmd: easyeffects
+          - key: "r"
+            desc: Reset EasyEffects
+            cmd: easyeffects -rws
+          - key: "x"
+            desc: Enable output
+            cmd: easyeffects --bypass-toggle
+      - key: "b"
+        desc: Reset bluetooth
+        cmd: fuzzel-res-bluetoth.sh
+  - key: "m"
+    desc: Mount all
+    cmd: fuzzel-mount-all.sh
+  - key: "w"
+    desc: keep awake
+    cmd: qs -c noctalia-shell ipc call idleInhibitor toggle
+  - key: "n"
+    desc: Noctalia
+    submenu: 
+      - key: "w"
+        desc: random wallpaler
+        cmd: qs -c noctalia-shell ipc call wallpaper random all
+      - key: "b"
+        desc: Toglle bar
+        cmd: qs -c noctalia-shell ipc call bar toggle
+      - key: "d"
+        desc: Toglle dock
+        cmd: qs -c noctalia-shell ipc call dock toggle
+  - key: "s"
+    desc: Settings
+    submenu:
+        - key: "a"
+          desc: Audio
+          cmd: pwmenu -l fuzzel
+        - key: "b"
+          desc: Bluetooth
+          cmd: bzmenu -l fuzzel
+
+background: "#131316b2"
+color: "#e4e1e6"
+border: "#b6c4ff"

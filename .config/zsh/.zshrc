@@ -261,6 +261,14 @@ alias -s jsonc=v
 
 # Note: 'extract' function is removed because we are using the 'extract' plugin
 
+function y() {
+	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
+	command yazi "$@" --cwd-file="$tmp"
+	IFS= read -r -d '' cwd < "$tmp"
+	[ "$cwd" != "$PWD" ] && [ -d "$cwd" ] && builtin cd -- "$cwd"
+	rm -f -- "$tmp"
+}
+
 ftext() {
     grep -iIHrn --color=always "$1" . | less -r
 }

@@ -2,13 +2,13 @@ include "layout.kdl"
 
 include "input.kdl"
 
-include "colors.kdl"
+include "./noctalia.kdl"
 
 include "startup.kdl"
 
 include "binds.kdl"
 
-include "./noctalia.kdl"
+// include "colors.kdl"
 
 include "animation.kdl"
 
