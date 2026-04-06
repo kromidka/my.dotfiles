@@ -45,9 +45,6 @@ menu:
       - key: "b"
         desc: Reset bluetooth
         cmd: fuzzel-res-bluetoth.sh
-  - key: "m"
-    desc: Mount all
-    cmd: fuzzel-mount-all.sh
   - key: "w"
     desc: keep awake
     cmd: qs -c noctalia-shell ipc call idleInhibitor toggle
@@ -72,7 +69,14 @@ menu:
         - key: "b"
           desc: Bluetooth
           cmd: bzmenu -l fuzzel
+        - key: "m"
+          desc: Mount all
+          cmd: fuzzel-mount-all.sh
+        - key: "g"
+          desc: sync-dotfiles
+          cmd: sync-dotfiles
 
-background: "#111415b2"
-color: "#e1e2e5"
-border: "#73d1ff"
+
+background: "#18120fb2"
+color: "#ece0db"
+border: "#ffb68f"
