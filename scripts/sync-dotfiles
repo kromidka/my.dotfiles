@@ -29,12 +29,12 @@ if [ -n "$(git status --porcelain)" ]; then
     # Use fuzzel to get the commit message
     commit_msg=$(printf "" | fuzzel --minimal-lines -d -p "Commit Message: " --placeholder="Message")
 
-    # Check if string is empty (User pressed Enter without typing)
-    if [ -z "$commit_msg" ]; then
-        # Generate a timestamped message
-        commit_msg="Auto-sync: $(date '+%Y-%m-%d %H:%M')"
-        notify_user "Using auto-generated timestamp message." "Git" "dialog-information"
-    fi
+    # # Check if string is empty (User pressed Enter without typing)
+    # if [ -z "$commit_msg" ]; then
+    #     # Generate a timestamped message
+    #     commit_msg="Auto-sync: $(date '+%Y-%m-%d %H:%M')"
+    #     notify_user "Using auto-generated timestamp message." "Git" "dialog-information"
+    # fi
 
     # Check if user cancelled (Esc or empty string)
     if [ -z "$commit_msg" ]; then
