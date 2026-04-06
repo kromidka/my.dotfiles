@@ -96,6 +96,27 @@ for folder in "$SOURCE_CONFIG"/*; do
     run_cmd ln -snf "$folder" "$target"
 done
 
+# --- Symlink scripts to local bin ---
+echo "--- Linking scripts to ~/.local/bin ---"
+run_cmd mkdir -p "$HOME/.local/bin"
+SCRIPT_SRC="$DOTFILES_DIR/scripts"
+
+if [ -d "$SCRIPT_SRC" ]; then
+    for script in "$SCRIPT_SRC"/*; do
+        [ -f "$script" ] || continue  # Only link files, skip directories
+        name=$(basename "$script")
+        target="$HOME/.local/bin/$name"
+
+        # Check if it's already linked or exists
+        if [ -e "$target" ] && [ "$(readlink "$target")" != "$script" ]; then
+            echo "[BACKUP] Moving existing bin $name to $BACKUP_DIR"
+            run_cmd mv "$target" "$BACKUP_DIR/"
+        fi
+        
+        run_cmd ln -snf "$script" "$target"
+    done
+fi
+
 # ==========================================
 # SKIP THESE STEPS IF --links-only IS PASSED
 # ==========================================
