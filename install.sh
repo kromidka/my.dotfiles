@@ -11,6 +11,13 @@ ZEN_CONF_DIR="$DOTFILES_DIR/.zen"
 ZEN_TARGET_CONF="$HOME/.zen"
 BACKUP_DIR="$HOME/.bak"
 
+# Helper for desktop notifications
+notify_user() {
+    local title="Dotfiles Installer"
+    local message="$1"
+    command -v notify-send >/dev/null && notify-send "$title" "$message"
+}
+
 # --- Argument Parsing ---
 DRY_RUN=false
 LINKS_ONLY=false
@@ -180,12 +187,16 @@ run_cmd ln -snf "$ZEN_CONF_DIR" "$ZEN_TARGET_CONF"
 echo ""
 if [ "$DRY_RUN" = true ]; then
     echo "--- Test Run Complete. No files were changed. ---"
+    notify_user "Test Run Complete. No changes made."
 else
     echo "--- Backup Summary ---"
     ls -F "$BACKUP_DIR"
+    
     if [ "$LINKS_ONLY" = true ]; then
         echo -e "\n--- Symlinking Complete! ---"
+        notify_user "Symlinking complete! Your dotfiles are updated."
     else
         echo -e "\n--- Setup Complete! Reboot to see changes. ---"
+        notify_user "Setup complete! Please reboot to apply system changes."
     fi
 fi

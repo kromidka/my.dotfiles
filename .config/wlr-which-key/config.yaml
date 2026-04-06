@@ -75,8 +75,11 @@ menu:
         - key: "g"
           desc: sync-dotfiles
           cmd: sync-dotfiles
+        - key: "i"
+          desc: update links from dotfiles
+          cmd: ~/git/my.dotfiles/install.sh -l
 
 
-background: "#18120fb2"
-color: "#ece0db"
-border: "#ffb68f"
+background: "#121316b2"
+color: "#e3e2e6"
+border: "#adc6ff"
