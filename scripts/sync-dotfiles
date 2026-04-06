@@ -1,0 +1,35 @@
+#!/bin/sh
+
+# Navigate to your dotfiles directory
+# Using -P to resolve physical directory structure
+cd "$HOME/git/my.dotfiles" || {
+    echo "[ERROR] Could not find dotfiles directory"
+    exit 1
+}
+
+# Check if there are changes to commit
+# git status -s returns 0 even if empty, so we check if the output string is empty
+if [ -n "$(git status --porcelain)" ]; then
+    echo "--- Changes detected. Committing... ---"
+    
+    # Stage all changes
+    git add .
+    
+    # Prompt for a commit message
+    printf "Enter commit message: "
+    # POSIX read doesn't support -p for prompts, hence the printf above
+    read -r commit_msg
+    
+    # Fallback for empty message
+    if [ -z "$commit_msg" ]; then
+        commit_msg="Update dotfiles: $(date '+%Y-%m-%d %H:%M')"
+    fi
+    
+    # Commit and push
+    git commit -m "$commit_msg"
+    git push origin main
+    
+    echo "--- Dotfiles synced successfully! ---"
+else
+    echo "No changes to commit. Your dotfiles are up to date."
+fi

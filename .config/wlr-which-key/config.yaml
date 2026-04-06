@@ -73,6 +73,6 @@ menu:
           desc: Bluetooth
           cmd: bzmenu -l fuzzel
 
-background: "#121316b2"
-color: "#e2e2e5"
-border: "#99cbff"
+background: "#111415b2"
+color: "#e1e2e5"
+border: "#73d1ff"
