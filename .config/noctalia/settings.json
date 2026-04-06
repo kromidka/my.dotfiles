@@ -614,7 +614,7 @@
         "enableMarkdown": false,
         "enableMediaToast": false,
         "enabled": true,
-        "location": "top",
+        "location": "top_right",
         "lowUrgencyDuration": 3,
         "monitors": [
         ],

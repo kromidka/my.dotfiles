@@ -12,11 +12,38 @@ ZEN_TARGET_CONF="$HOME/.zen"
 BACKUP_DIR="$HOME/.bak"
 
 # Helper for desktop notifications
+
+# Helper for Noctalia-shell IPC and system notifications
 notify_user() {
-    local title="Dotfiles Installer"
+    local title="${2:-Dotfiles}" # Default title to Dotfiles if not provided
     local message="$1"
-    command -v notify-send >/dev/null && notify-send "$title" "$message"
+    local icon="${3:-system-software-update}" # Default icon
+
+    # 1. Try Noctalia-shell IPC (qs call)
+    if command -v qs >/dev/null; then
+        # Constructing the JSON string carefully for the shell
+        # Use printf to handle special characters in the message safely
+        json_payload=$(printf '{"title": "%s", "body": "%s", "icon": "%s"}' "$title" "$message" "$icon")
+        
+        # Execute the IPC call
+        # We use run_cmd here so it respects your --dry-run flag
+        run_cmd qs -c noctalia-shell ipc call toast send "$json_payload"
+        
+    # 2. Fallback to notify-send (Standard desktop notification)
+    elif command -v notify-send >/dev/null; then
+        notify-send -i "$icon" "$title" "$message"
+        
+    # 3. Last resort: Terminal output
+    else
+        echo "[$title] $message"
+    fi
 }
+
+# notify_user() {
+#     local title="Dotfiles Installer"
+#     local message="$1"
+#     command -v notify-send >/dev/null && notify-send "$title" "$message"
+# }
 
 # --- Argument Parsing ---
 DRY_RUN=false

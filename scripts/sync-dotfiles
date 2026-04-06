@@ -1,34 +1,57 @@
 #!/bin/sh
 
-# Navigate to your dotfiles directory
+# --- Configuration ---
 DOTFILES_DIR="$HOME/git/my.dotfiles"
 cd "$DOTFILES_DIR" || exit 1
 
-# Check for changes
+# --- Notification Helper ---
+notify_user() {
+    local message="$1"
+    local title="${2:-Dotfiles Sync}"
+    local icon="${3:-vcs-normal}"
+
+    if command -v qs >/dev/null; then
+        # Construct JSON for Noctalia-shell
+        json_payload=$(printf '{"title": "%s", "body": "%s", "icon": "%s"}' "$title" "$message" "$icon")
+        qs -c noctalia-shell ipc call toast send "$json_payload"
+    elif command -v notify-send >/dev/null; then
+        notify-send -i "$icon" "$title" "$message"
+    else
+        echo "[$title] $message"
+    fi
+}
+
+# --- Main Logic ---
 if [ -n "$(git status --porcelain)" ]; then
-    # Stage changes
+    # Stage all changes
     git add .
 
     # Use fuzzel to get the commit message
-    # -d: dmenu mode
-    # -p: prompt text
-    commit_msg=$(printf "" | fuzzel --minimal-lines -d -p "Commit Message: " --placeholder="Message:")
+    commit_msg=$(printf "" | fuzzel --minimal-lines -d -p "Commit Message: " --placeholder="Message")
 
-    # Check if user cancelled (Esc/Empty)
+    # Check if string is empty (User pressed Enter without typing)
     if [ -z "$commit_msg" ]; then
-        echo "Sync cancelled by user."
+        # Generate a timestamped message
+        commit_msg="Auto-sync: $(date '+%Y-%m-%d %H:%M')"
+        notify_user "Using auto-generated timestamp message." "Git" "dialog-information"
+    fi
+
+    # Check if user cancelled (Esc or empty string)
+    if [ -z "$commit_msg" ]; then
+        notify_user "Sync cancelled: No message provided." "Git" "dialog-information"
         exit 0
     fi
 
-    # Commit and Push
+    # Attempt to commit and push
     if git commit -m "$commit_msg"; then
-        # Notify user (optional: requires libnotify/dunst/mako)
-        git push origin main && \
-        command -v notify-send >/dev/null && notify-send "Dotfiles" "Synced successfully!"
+        if git push origin main; then
+            notify_user "Successfully pushed to GitHub!" "Git" "vcs-normal"
+        else
+            notify_user "Commit created, but Push failed. Check connection." "Git Error" "dialog-warning"
+        fi
     else
-        command -v notify-send >/dev/null && notify-send "Dotfiles" "Error: Commit failed."
-        exit 1
+        notify_user "Failed to create commit." "Git Error" "dialog-error"
     fi
 else
-    command -v notify-send >/dev/null && notify-send "Dotfiles" "Already up to date."
+    notify_user "Everything is already up to date." "Git" "vcs-normal"
 fi
