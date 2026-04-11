@@ -159,10 +159,10 @@
                 {
                     "clockColor": "none",
                     "customFont": "",
-                    "formatHorizontal": "HH:mm ddd, dd.MM",
+                    "formatHorizontal": "H:m:s ddd, dd.MM",
                     "formatVertical": "HH mm - dd MM",
                     "id": "Clock",
-                    "tooltipFormat": "HH:mm ddd, MMM dd",
+                    "tooltipFormat": "HH:mm t dddd, dd.mm",
                     "useCustomFont": false
                 },
                 {
@@ -181,18 +181,18 @@
                 {
                     "compactMode": true,
                     "diskPath": "/",
-                    "iconColor": "none",
+                    "iconColor": "tertiary",
                     "id": "SystemMonitor",
                     "showCpuCores": false,
                     "showCpuFreq": false,
                     "showCpuTemp": true,
                     "showCpuUsage": true,
-                    "showDiskAvailable": false,
+                    "showDiskAvailable": true,
                     "showDiskUsage": false,
-                    "showDiskUsageAsPercent": false,
+                    "showDiskUsageAsPercent": true,
                     "showGpuTemp": false,
                     "showLoadAverage": false,
-                    "showMemoryAsPercent": false,
+                    "showMemoryAsPercent": true,
                     "showMemoryUsage": true,
                     "showNetworkStats": true,
                     "showSwapUsage": false,
@@ -215,10 +215,10 @@
             "right": [
                 {
                     "displayMode": "onhover",
-                    "iconColor": "none",
+                    "iconColor": "primary",
                     "id": "KeyboardLayout",
                     "showIcon": true,
-                    "textColor": "none"
+                    "textColor": "primary"
                 },
                 {
                     "blacklist": [
@@ -425,8 +425,8 @@
                         "showVisualizer": true,
                         "visualizerType": "wave",
                         "visualizerVisibility": "always",
-                        "x": 1567,
-                        "y": 981
+                        "x": 1565,
+                        "y": 899
                     },
                     {
                         "id": "Weather",
@@ -434,6 +434,17 @@
                         "showBackground": false,
                         "x": 1661,
                         "y": 296
+                    },
+                    {
+                        "defaultSettings": {
+                            "hideBackground": false,
+                            "minimumThreshold": 10
+                        },
+                        "id": "plugin:catwalk",
+                        "scale": 0.5,
+                        "showBackground": true,
+                        "x": 1712,
+                        "y": 990
                     }
                 ]
             }

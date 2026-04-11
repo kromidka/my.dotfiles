@@ -12,7 +12,7 @@ layout {
 //		proportion 0.5
 //	}
 
-	default-column-width { proportion 0.7; }
+	// default-column-width { proportion 0.7; }
 	//default-column-width {}
 
 
@@ -40,6 +40,15 @@ window-rule {
 	draw-border-with-background false
 }
 
+
+window-rule {
+	match title="^Picture-in-Picture$"
+	open-floating true
+	default-floating-position x=50 y=50 relative-to="bottom-right"
+	default-column-width { fixed 485; }
+	default-window-height { fixed 276; }
+}
+
 window-rule {
 	match title="^Picture in picture$"
 	open-floating true
@@ -64,10 +73,16 @@ layer-rule {
 	}
 
 window-rule {
-	match app-id="^brave*"
+	match app-id="brave-browser"
 	// default-column-width { proportion 0.8;}
 	open-maximized true
 }
+
+window-rule {
+	match app-id="org.kde.dolphin"
+	open-maximized true
+}
+
 
 window-rule {
 	match app-id="^affinity*"
@@ -87,11 +102,15 @@ window-rule {
 window-rule {
 	match title="^Bitwarden$"
 	open-floating true
+    	default-floating-position x=15 y=15 relative-to="top-right"
+    	default-column-width { fixed 600; }
+    	default-window-height { fixed 800; }
 }
 
 window-rule {
 	match app-id="brave-nngceckbapebfimnlniiiahkandclblb-Default"
 	open-floating true
+    	default-floating-position x=20 y=20 relative-to="top-right"
 }
 
 window-rule {

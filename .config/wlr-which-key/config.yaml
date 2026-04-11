@@ -48,6 +48,7 @@ menu:
   - key: "w"
     desc: keep awake
     cmd: qs -c noctalia-shell ipc call idleInhibitor toggle
+  # - key: "e"
   - key: "n"
     desc: Noctalia
     submenu: 
@@ -60,6 +61,9 @@ menu:
       - key: "d"
         desc: Toglle dock
         cmd: qs -c noctalia-shell ipc call dock toggle
+      - key: "e"
+        desc: peek bar
+        cmd: qs -c noctalia-shell ipc call bar peek
   - key: "s"
     desc: Settings
     submenu:
@@ -82,4 +86,4 @@ menu:
 
 background: "#121316b2"
 color: "#e3e2e6"
-border: "#a6c8ff"
+border: "#aac7ff"
