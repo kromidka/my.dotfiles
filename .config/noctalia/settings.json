@@ -166,19 +166,6 @@
                     "useCustomFont": false
                 },
                 {
-                    "defaultSettings": {
-                        "apiKey": "",
-                        "apiUrl": "",
-                        "configPath": "",
-                        "enabled": true,
-                        "folderIds": [
-                        ],
-                        "pollIntervalMs": 10000,
-                        "verifyTls": false
-                    },
-                    "id": "plugin:syncthing-status"
-                },
-                {
                     "compactMode": true,
                     "diskPath": "/",
                     "iconColor": "tertiary",
@@ -199,6 +186,19 @@
                     "textColor": "none",
                     "useMonospaceFont": true,
                     "usePadding": false
+                },
+                {
+                    "defaultSettings": {
+                        "apiKey": "",
+                        "apiUrl": "",
+                        "configPath": "",
+                        "enabled": true,
+                        "folderIds": [
+                        ],
+                        "pollIntervalMs": 10000,
+                        "verifyTls": false
+                    },
+                    "id": "plugin:syncthing-status"
                 },
                 {
                     "colorizeIcons": false,
