@@ -42,12 +42,12 @@ menu:
           - key: "x"
             desc: Enable output
             cmd: easyeffects --bypass-toggle
-      - key: "e"
-        desc: EasyEffects toggle output effects
-        cmd: easyeffects --bypass-toggle
       - key: "b"
         desc: Reset bluetooth
         cmd: fuzzel-res-bluetoth.sh
+  - key: "e"
+    desc: EasyEffects toggle
+    cmd: easyeffects --bypass-toggle
   - key: "w"
     desc: keep awake
     cmd: qs -c noctalia-shell ipc call idleInhibitor toggle
@@ -87,6 +87,6 @@ menu:
           cmd: ~/git/my.dotfiles/install.sh -l
 
 
-background: "#111415b2"
-color: "#e1e3e4"
-border: "#54d7f2"
+background: "#121316b2"
+color: "#e2e2e6"
+border: "#9dcaff"
