@@ -47,7 +47,7 @@ menu:
         cmd: fuzzel-res-bluetoth.sh
   - key: "e"
     desc: EasyEffects toggle
-    cmd: easyeffects --bypass-toggle
+    cmd: easyeffects --bypass-toggle && easyeffects --bypass-toggle
   - key: "w"
     desc: keep awake
     cmd: qs -c noctalia-shell ipc call idleInhibitor toggle
@@ -88,5 +88,5 @@ menu:
 
 
 background: "#121316b2"
-color: "#e2e2e6"
-border: "#9dcaff"
+color: "#e3e2e6"
+border: "#abc7ff"

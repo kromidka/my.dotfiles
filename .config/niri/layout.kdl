@@ -12,8 +12,8 @@ layout {
 //		proportion 0.5
 //	}
 
-	// default-column-width { proportion 0.7; }
-	//default-column-width {}
+	default-column-width { proportion 0.7; }
+	// default-column-width {}
 
 
 	focus-ring {
@@ -74,8 +74,8 @@ layer-rule {
 
 window-rule {
 	match app-id="brave-browser"
-	// default-column-width { proportion 0.8;}
-	open-maximized true
+	default-column-width { proportion 0.85;}
+	// open-maximized true
 }
 
 window-rule {
@@ -147,3 +147,8 @@ window-rule {
 	open-maximized true
 }
 
+
+window-rule {
+	match app-id="open_tv"
+	open-maximized true
+}

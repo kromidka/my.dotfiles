@@ -52,3 +52,4 @@
 @define-color theme_unfocused_selected_fg_color @accent_fg_color;
 
 @import url("noctalia.css");
+@import 'colors.css';

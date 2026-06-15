@@ -1,7 +1,7 @@
 # After 2 minutes (120s), dim the screen. Resume on activity.
 # timeout 120 'ddcutil --bus 6 setvcp 10 15' resume 'ddcutil --bus 6 setvcp 10 100'
 # timeout 120 'qs -c noctalia-shell ipc call brightness set 15' resume 'qs -c noctalia-shell ipc call brightness set 100'
-timeout 60 'qs -c noctalia-shell ipc call brightness set 15' resume 'qs -c noctalia-shell ipc call brightness set 100'
+timeout 120 'qs -c noctalia-shell ipc call brightness set 15' resume 'qs -c noctalia-shell ipc call brightness set 100'
 
 
 # After 15 minutes (900s), turn monitors off.
