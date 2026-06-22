@@ -34,12 +34,55 @@ layout {
 	}
 }
 
-	prefer-no-csd
+prefer-no-csd
+
+
+// # GENERAL RULES
 
 window-rule {
 	draw-border-with-background false
 }
 
+window-rule {
+	geometry-corner-radius 8
+	clip-to-geometry true
+}
+
+layer-rule {
+	match namespace="^noctalia-overview*"
+	place-within-backdrop true
+}
+
+
+// # MAXIMIZED APPS
+
+window-rule {
+	match app-id="org.kde.dolphin"
+	open-maximized true
+}
+
+window-rule {
+	match app-id="^affinity*"
+	open-maximized true
+}
+
+window-rule {
+	match app-id="mpv"
+	open-maximized true
+}
+
+window-rule {
+	match app-id="nl.jknaapen.fladder"
+	open-maximized true
+}
+
+window-rule {
+	match app-id="open_tv"
+	open-maximized true
+}
+
+
+// # FLOATING APPS
 
 window-rule {
 	match title="^Picture-in-Picture$"
@@ -58,97 +101,63 @@ window-rule {
 }
 
 window-rule {
-	match app-id=r#"firefox$"# title="^Picture-in-picture$"
-	open-floating true
-}
-
-window-rule {
-	geometry-corner-radius 8
-	clip-to-geometry true
-}
-
-layer-rule {
-	match namespace="^noctalia-overview*"
-	place-within-backdrop true
-	}
-
-window-rule {
-	match app-id="brave-browser"
-	default-column-width { proportion 0.85;}
-	// open-maximized true
-}
-
-window-rule {
-	match app-id="org.kde.dolphin"
-	open-maximized true
-}
-
-
-window-rule {
-	match app-id="^affinity*"
-	open-maximized true
-}
-
-window-rule {
-    match app-id="mpv"
-    open-maximized true
-}
-
-window-rule {
 	match app-id="org.kde.kcalc"
 	open-floating true
 }
 
 window-rule {
-	match title="^Bitwarden$"
+	match app-id="brave-browser"
 	open-floating true
-    	default-floating-position x=15 y=15 relative-to="top-right"
-    	default-column-width { fixed 600; }
-    	default-window-height { fixed 800; }
+	default-floating-position x=15 y=15 relative-to="top-right"
+	default-column-width { fixed 600; }
+	default-window-height { fixed 800; }
 }
 
 window-rule {
 	match app-id="brave-nngceckbapebfimnlniiiahkandclblb-Default"
 	open-floating true
-    	default-floating-position x=20 y=20 relative-to="top-right"
+	default-floating-position x=20 y=20 relative-to="top-right"
 }
 
 window-rule {
-    match app-id="rmpc-float"
-    open-floating true
-    default-column-width { fixed 1000; }
-    default-window-height { fixed 600; }
+	match app-id="rmpc-float"
+	open-floating true
+	default-column-width { fixed 1000; }
+	default-window-height { fixed 600; }
 }
 
 window-rule {
-    match app-id="float"
-    open-floating true
-    default-column-width { fixed 1000; }
-    default-window-height { fixed 600; }
+	match app-id="float"
+	open-floating true
+	default-column-width { fixed 1000; }
+	default-window-height { fixed 600; }
 }
 
 window-rule {
-    match app-id="org.telegram.desktop"
-    open-floating true
-    default-column-width { fixed 600; }
-    default-window-height { fixed 1000; }
-    default-floating-position x=50 y=50 relative-to="bottom-right"
+	match title="^Bitwarden$"
+	open-floating true
+	default-floating-position x=15 y=15 relative-to="top-right"
+	default-column-width { fixed 600; }
+	default-window-height { fixed 800; }
 }
 
 window-rule {
-    match app-id="brave-duckduckgo.com__-Default"
-    open-floating true
-    default-column-width { fixed 1000; }
-    default-window-height { fixed 600; }
+	match app-id="org.telegram.desktop"
+	open-floating true
+	default-column-width { fixed 600; }
+	default-window-height { fixed 1000; }
+	default-floating-position x=50 y=50 relative-to="bottom-right"
 }
 
 window-rule {
-	match app-id="nl.jknaapen.fladder"
-	open-maximized true
+	match app-id="brave-duckduckgo.com__-Default"
+	open-floating true
+	default-column-width { fixed 1000; }
+	default-window-height { fixed 600; }
 }
 
-
 window-rule {
-	match app-id="open_tv"
-	open-maximized true
+	match app-id="firefox$"
+	match title="^Picture-in-picture$"
+	open-floating true
 }
